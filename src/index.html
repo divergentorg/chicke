@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href = "css/index.css"/>
+	<script type="text/javascript" src="js/jquery-1.12.0.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.my_bag').on('mouseenter',function(){
+				$('#my_bag').css({
+					display:'block'
+				})
+				$('#new_bag').css({
+					color:'red',
+					backgroundColor:'#fff'
+				})
+			})
+			$('.my_bag').on('mouseleave',function(){
+				$('#my_bag').css({
+					display:'none'
+				})
+				$('#new_bag').css({
+					color:'#d7d7d7',
+					backgroundColor:'#333'
+				})
+			})
+			$('#mine').on('mouseenter',function(){
+				$('#xiuurl').css({
+					backgroundColor: '#fff',
+					borderLeft:'1px solid #d7d7d7',
+					borderRight:'1px solid #d7d7d7',
+					color:'red',
+				})
+				$('#my_xiu').css({
+					display:'block'
+				})
+			})
+			$('#mine').on('mouseleave',function(){
+				$('#my_xiu').css({
+					display:'none'
+				})
+				$('#xiuurl').css({
+					'background-color': '#333333',
+					'borderLeft':0,
+					'borderRight':0,
+					color:'#d7d7d7'
+				})
+			})
+			$('.a1').on('mouseenter',function(){
+				$(this).css({
+					color:'red'
+				})
+			})
+			$('.a1').on('mouseleave',function(){
+				$(this).css({
+					color:'#000'
+				})
+			})
+		})
+	</script>
+</head>
+<body>
+	<div id="header">
+		<div class="header">
+			<div class="header_main">
+				<div class="header_main1">
+					<div class="header_left">
+						<ul class="headerlist">
+							<li id="loginDiv"><a href="" title="登录/注册">登录/注册</a></li>
+							<li id="bag" class="my_bag relax">
+								<a id="new_bag" href="">购物袋<span id='num' class="indx">0</span>件</a>
+								<div id="my_bag" class="my_Bag" style="display:none;">
+									<div style="padding-top:0;padding-left:8px;padding-bottom:8px;">
+										<span>购物袋暂时没有商品！</span>
+									</div>
+								</div>
+							</li>
+							<li id="mine" class="my_xiu">
+								<a href="" id="xiuurl" class="down">
+									我的走秀
+								</a>
+								<div id="my_xiu" class="myXiu_menu">
+									<a href=""  class="a1"= 'nofollow'>我的订单</a>
+									<a href=""  class="a1"= 'nofollow'>自动退货</a>
+									<a href=""  class="a1"= 'nofollow'>我的收藏</a>
+									<a href=""  class="a1"= 'nofollow'>帮助中心</a>
+									<a href=""  class="a1"= 'nofollow'>全部吐槽</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</body>
+</html>
