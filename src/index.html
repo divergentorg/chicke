@@ -65,6 +65,22 @@
 			$('#header_sousuo').on('blur',function(){
 				$(this).val('请搜索Stella McCartney试试')
 			});
+			$('#bottom_list').find('li').on('mouseenter',function(){
+				$(this).css({
+					borderBottom:'3px solid gray'
+				})
+				$(this).find('a').css({
+					color:'#d7d7d7'
+				})
+			})
+			$('#bottom_list').find('li').on('mouseleave',function(){
+				$(this).css({
+					borderBottom:'0'
+				})
+				$(this).find('a').css({
+					color:'#fff'
+				})
+			})
 		})
 	</script>
 </head>
@@ -105,6 +121,38 @@
 						<input type="text" value="请搜索Stella McCartney试试" style="background:#333;color:#787878;" id="header_sousuo"/>
 						<input type="submit" id="btnS" value=""/>
 					</form>
+				</div>
+
+				<div class="header_bottom">
+					<ul id="bottom_list">
+						<li>
+							<a href="">首页</a>
+						</li>
+						<li>
+							<a href="">新品</a>
+						</li>
+						<li>
+							<a href="">男士</a>
+						</li>
+						<li>
+							<a href="">女士</a>
+						</li>
+						<li>
+							<a href="">品牌</a>
+						</li>
+						<li>
+							<a href="">热销</a>
+						</li>
+						<li>
+							<a href="">礼物</a>
+						</li>
+						<li>
+							<a href="">专题</a>
+						</li>
+						<li id="list_last">
+							<a href="">手机走秀</a>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>

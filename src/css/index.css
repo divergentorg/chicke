@@ -14,7 +14,9 @@ li{
 input{
 	border:0;
 }
-	
+a{
+	text-decoration: none;
+}	
 
 #header{
 	width:100%;
@@ -178,4 +180,34 @@ input{
 	float:right;
 	background:url(img/sousuo.jpg);
 	cursor: pointer;
+}
+.header_bottom{
+	height:44px;
+	width:1200px;
+	margin-top:37px;
+	position: relative;
+}
+#bottom_list{
+	width:696px;
+	position: absolute;
+	left:50%;
+	margin-left:-348px;
+	height:44px;
+}
+#bottom_list li{
+	display:inline-block;
+	width:73px;
+	height:44px;
+	text-align: center;
+}
+#bottom_list li a{
+	display:block;
+	height:44px;
+	color:#fff;
+	font-size:14px;
+	line-height:44px;
+}
+#bottom_list li#list_last{
+	width:90px;
+	float:right;
 }
