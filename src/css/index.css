@@ -4,12 +4,15 @@ body{
     color:#000;
     padding: 0;
 }
-ul{
+ul,input{
 	margin:0;
 	padding: 0;
 }
 li{
 	list-style:none;
+}
+input{
+	border:0;
 }
 	
 
@@ -139,5 +142,40 @@ li{
 .headerlist li{
 	display:inline;
 }
-
-
+.header_img{
+	width: 212px;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	margin: 10px 0 0 -106px
+}
+.header_img a{
+	display: block;
+	width: 212px;
+	height: 32px;
+}
+.sousuo{
+	width:261px;
+	height:26px;
+	border:1px solid #787878;
+}
+#sousuo{
+	background-color:#333;
+	color:#787878;
+}
+#header_form{
+	width:261px;
+	height:26px;
+}
+#header_sousuo{
+	width:228px;
+	line-height:26px;
+	padding-left:9px;
+}
+#btnS{
+	width:24px;
+	height:26px;
+	float:right;
+	background:url(img/sousuo.jpg);
+	cursor: pointer;
+}

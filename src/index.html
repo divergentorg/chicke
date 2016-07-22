@@ -15,7 +15,7 @@
 					color:'red',
 					backgroundColor:'#fff'
 				})
-			})
+			});
 			$('.my_bag').on('mouseleave',function(){
 				$('#my_bag').css({
 					display:'none'
@@ -24,7 +24,7 @@
 					color:'#d7d7d7',
 					backgroundColor:'#333'
 				})
-			})
+			});
 			$('#mine').on('mouseenter',function(){
 				$('#xiuurl').css({
 					backgroundColor: '#fff',
@@ -35,7 +35,7 @@
 				$('#my_xiu').css({
 					display:'block'
 				})
-			})
+			});
 			$('#mine').on('mouseleave',function(){
 				$('#my_xiu').css({
 					display:'none'
@@ -46,17 +46,25 @@
 					'borderRight':0,
 					color:'#d7d7d7'
 				})
-			})
+			});
 			$('.a1').on('mouseenter',function(){
 				$(this).css({
 					color:'red'
 				})
-			})
+			});
 			$('.a1').on('mouseleave',function(){
 				$(this).css({
 					color:'#000'
 				})
-			})
+			});
+			$('#header_sousuo').on('focus',function(){
+				if($(this).val()=='请搜索Stella McCartney试试'){
+					$(this).val('')
+				}
+			});
+			$('#header_sousuo').on('blur',function(){
+				$(this).val('请搜索Stella McCartney试试')
+			});
 		})
 	</script>
 </head>
@@ -90,6 +98,13 @@
 							</li>
 						</ul>
 					</div>
+				</div>
+				<div class="header_img"><a href=""><img src="img/header1_03.jpg"/></a></div>
+				<div style="float:right" class="sousuo">
+					<form id="header_form">
+						<input type="text" value="请搜索Stella McCartney试试" style="background:#333;color:#787878;" id="header_sousuo"/>
+						<input type="submit" id="btnS" value=""/>
+					</form>
 				</div>
 			</div>
 		</div>
