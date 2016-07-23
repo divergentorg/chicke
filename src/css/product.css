@@ -1,0 +1,42 @@
+.main{
+	width:1000px;
+	margin:0 auto;
+}
+.product_header{
+	margin: 10px 0 16px 0;
+	padding: 0 0 5px 12px;
+	line-height: 25px;
+	color: #646464;
+	border-bottom: 1px solid #e5e5e5;
+	background: url(../img/goods_info.gif) no-repeat 0 7px;
+	overflow: hidden;
+	white-space: nowrap;
+	
+}
+
+.product_header a{
+	color: #005ba1;
+}
+.pro_content{
+	margin-top: 15px;
+	display: table;
+	width: 1000px;
+}
+.con_main{
+	width: 100%;
+	overflow: hidden;
+	clear: both;
+	margin-bottom: 30px;
+}
+.p_map{
+	width: 412px;
+	float: left;
+}
+.big_map{
+	border: 1px solid #ccc;
+	position: relative;
+	padding: 5px;
+	height: 536px;
+	width: 402px;
+	z-index: 1;
+}

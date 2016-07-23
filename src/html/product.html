@@ -3,9 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" type="text/css" href = "css/public.css"/>
-	<link rel="stylesheet" type="text/css" href = "css/index.css"/>
-	<script type="text/javascript" src="js/jquery-1.12.0.js"></script>
+	<link rel="stylesheet" type="text/css" href = "../css/public.css"/>
+	<link rel="stylesheet" type="text/css" href = "../css/product.css"/>
+	<script type="text/javascript" src="../js/jquery-1.12.0.js"></script>
 	<script type="text/javascript">
 		$(function(){
 			$('.my_bag').on('mouseenter',function(){
@@ -156,74 +156,10 @@
 					background:'#f7f7f7'
 				})
 			})
-			$('.content_goods').find('li').on('mouseenter',function(){
-				$(this).find('img').fadeTo('fast','0.8')
-			})
-			$('.content_goods').find('li').on('mouseleave',function(){
-				$(this).find('img').fadeTo('fast','1')
-			})
-			$('.content_beats').find('li').on('mouseenter',function(){
-				$(this).find('.pic').animate({
-					width:'660px',
-					marginLeft:'-30px',
-					height:"330px",
-					marginTop:'-15px'
-
-				})
-			})
-			$('.content_beats').find('li').on('mouseleave',function(){
-				$(this).find('.pic').animate({
-					width:'600px',
-					marginLeft:'0',
-					height:"300px",
-					marginTop:'0'
-
-				})
-			})
-			$('.content_sale').find('li').on('mouseenter',function(){
-				$(this).find('.pic').animate({
-					width:'460px',
-					marginLeft:'-30px',
-					height:"330px",
-					marginTop:'-15px'
-
-				})
-			})
-			$('.content_sale').find('li').on('mouseleave',function(){
-				$(this).find('.pic').animate({
-					width:'400px',
-					marginLeft:'0',
-					height:"300px",
-					marginTop:'0'
-
-				})
-			})
-			$('.content_auto').on('mouseenter',function(){
-				$(this).find('img').css({
-					opacity:'0.9'
-				})
-			})
-			$('.content_auto').on('mouseleave',function(){
-				$(this).find('img').css({
-					opacity:'1'
-				})
-			})
-			$('.find_list').find('li').on('mouseenter',function(){
-				$(this).find('p').css({
-					border:'2px solid #d7d7d7'
-				})
-			})
-			$('.find_list').find('li').on('mouseleave',function(){
-				$(this).find('p').css({
-					border:'1px solid #efefef'
-				})
-			})
-		})	
-
+		})
 	</script>
 </head>
 <body>
-	<!--头部-->
 	<div id="header_wrap">
 		<div id="header">
 			<div class="header">
@@ -255,7 +191,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="header_img"><a href=""><img src="img/header1_03.jpg"/></a></div>
+					<div class="header_img"><a href=""><img src="../img/header1_03.jpg"/></a></div>
 					<div style="float:right" class="sousuo">
 						<form id="header_form">
 							<input type="text" value="请搜索Stella McCartney试试" style="background:#333;color:#787878;" id="header_sousuo"/>
@@ -1320,280 +1256,32 @@
 			</div>
 		</div>
 	</div>
-	<!--主要部分-->	
-	<div class="content">
-		<div class="content_box">
-			<div class="content_banner">
-				<div class="content_banner1">
-					<a href=""><img src="img/0721banner.jpg"/></a>
+	<!--商品详情-->
+	<div class="main">
+		<div class="product_header">
+			你的位置：
+			<span id="positionbox">
+				<a href="">走秀首页</a>
+				>
+				<a href="">男装</a>
+				>
+				<a href="">上装</a>
+				>
+				<a href="">衬衫</a>
+				>
+				<span class="positionPrdName">男士印花纯棉衬衫</span>
+			</span>
+		</div>
+		<div class="pro_content">
+			<div class="con_main">
+				<div class="p_map">
+					<div class="big_map"></div>
 				</div>
-			</div>
-			<div class="content_shortcut">
-				<a href="" class="shortcut1"></a>
-				<a href="" class="shortcut2"></a>
-				<a href="" class="shortcut3"></a>
-				<a href="" class="shortcut4"></a>
-			</div>
-			<div class="content_goods">
-				<h3><img src="img/goods_t.jpg"/></h3>
-				<ul>
-					<li><a href=""><img src="img/0723goods_a1.jpg"/></a></li>
-					<li><a href=""><img src="img/0723goods_a2.jpg"/></a></li>
-					<li><a href=""><img src="img/0723goods_a3.jpg"/></a></li>
-					<li><a href=""><img src="img/0723goods_a4.jpg"/></a></li>
-					<li><a href=""><img src="img/0723goods_a5.jpg"/></a></li>
-					<li><a href=""><img src="img/0723goods_a6.jpg"/></a></li>
-				</ul>
-				<ul>
-					<li><a href=""><img src="img/0723goods_b1.jpg"/></a></li>
-					<li><a href=""><img src="img/0723goods_b2.jpg"/></a></li>
-					<li><a href=""><img src="img/0723goods_b3.jpg"/></a></li>
-					<li><a href=""><img src="img/0723goods_b4.jpg"/></a></li>
-					<li><a href=""><img src="img/0723goods_b5.jpg"/></a></li>
-					<li><a href=""><img src="img/0723goods_b6.jpg"/></a></li>
-				</ul>
-			</div>
-			<div class="content_beats">
-				<h3><img src="img/topic_t.jpg"/></h3>
-				<ul>
-					<li>
-						<a href="">
-							<img class="pic" style="display:inline" src="img/0619beats_06.jpg">
-							<p><img src="img/0708beats_06.png"/></p>
-						</a>	
-					</li>
-					<li>
-						<a href="">
-							<img class="pic" style="display:inline" src="img/0719beats_01.jpg">
-							<p><img src="img/0719beats_01.png"/></p>
-						</a>	
-					</li>
-					<li>
-						<a href="">
-							<img class="pic" style="display:inline" src="img/0719beats_02.jpg">
-							<p><img src="img/0719beats_02.png"/></p>
-						</a>	
-					</li>
-					<li>
-						<a href="">
-							<img class="pic" style="display:inline" src="img/0719beats_03.jpg">
-							<p><img src="img/0719beats_03.png"/></p>
-						</a>	
-					</li>
-					<li>
-						<a href="">
-							<img class="pic" style="display:inline" src="img/0719beats_04.jpg">
-							<p><img src="img/0719beats_04.png"/></p>
-						</a>	
-					</li>
-					<li>
-						<a href="">
-							<img class="pic" style="display:inline" src="img/0719beats_05.jpg">
-							<p><img src="img/0719beats_05.png"/></p>
-						</a>	
-					</li>
-				</ul>
-				<h3><a href=""><img src="img/topic_m.jpg"/></a></h3>
-			</div>
-			<div class="content_sale">
-				<h3><img src="img/beat_t.jpg" style="display:inline" /></h3>
-				<ul>
-					<li>
-						<a href="">
-							<img src="img/0625sales_01.jpg" class="pic"/>
-							<p><img src="img/0625sales_01.png"/></p>
-						</a>
-
-					</li>
-					<li>
-						<a href="">
-							<img src="img/0625sales_02.jpg" class="pic"/>
-							<p><img src="img/0625sales_02.png"/></p>
-						</a>
-
-					</li>
-					<li>
-						<a href="">
-							<img src="img/0625sales_03.jpg" class="pic"/>
-							<p><img src="img/0625sales_03.png"/></p>
-						</a>
-
-					</li>
-					<li>
-						<a href="">
-							<img src="img/0625sales_04.jpg" class="pic"/>
-							<p><img src="img/0625sales_04.png"/></p>
-						</a>
-
-					</li>
-					<li>
-						<a href="">
-							<img src="img/0625sales_05.jpg" class="pic"/>
-							<p><img src="img/0625sales_05.png"/></p>
-						</a>
-
-					</li>
-					<li>
-						<a href="">
-							<img src="img/0625sales_06.jpg" class="pic"/>
-							<p><img src="img/0625sales_06.png"/></p>
-						</a>
-
-					</li>
-					<li>
-						<a href="">
-							<img src="img/0625sales_07.jpg" class="pic"/>
-							<p><img src="img/0625sales_07.png"/></p>
-						</a>
-
-					</li>
-					<li>
-						<a href="">
-							<img src="img/0625sales_08.jpg" class="pic"/>
-							<p><img src="img/0625sales_08.png"/></p>
-						</a>
-
-					</li>
-					<li>
-						<a href="">
-							<img src="img/0625sales_09.jpg" class="pic"/>
-							<p><img src="img/0625sales_09.png"/></p>
-						</a>
-
-					</li>
-					<li>
-						<a href="">
-							<img src="img/0625sales_10.jpg" class="pic"/>
-							<p><img src="img/0625sales_10.png"/></p>
-						</a>
-					</li>
-					
-					<li>
-						<a href="">
-							<img src="img/0625sales_11.jpg" class="pic"/>
-							<p><img src="img/0625sales_11.png"/></p>
-						</a>
-					</li>
-					<li>
-						<a href="">
-							<img src="img/0625sales_12.jpg" class="pic"/>
-							<p><img src="img/0625sales_12.png"/></p>
-						</a>
-					</li>
-					<div class="clear"></div>
-				</ul>
-				<h3><a href=""><img src="img/beat_m.jpg"/></a></h3>
-			</div>
-			<div class="content_auto">
-				<a href="">
-					<img src="img/0712auto.jpg"/>
-				</a>
-			</div>
-			<div class="content_find">
-				<h3><img src="img/found_t.jpg"/></h3>
-				<ul class="find_list">
-					<li>
-						<a href="">
-							<img src="img/20160719_001.jpg"/>
-							<p></p>
-						</a>
-					</li>
-					<li>
-						<a href="">
-							<img src="img/20160719_002.jpg"/>
-							<p></p>
-						</a>
-					</li>
-					<li>
-						<a href="">
-							<img src="img/20160719_003.jpg"/>
-							<p></p>
-						</a>
-					</li>
-					<li>
-						<a href="">
-							<img src="img/20160719_004.jpg"/>
-							<p></p>
-						</a>
-					</li>
-					<li>
-						<a href="">
-							<img src="img/20160719_005.jpg"/>
-							<p></p>
-						</a>
-					</li>
-					<li>
-						<a href="">
-							<img src="img/20160719_006.jpg"/>
-							<p></p>
-						</a>
-					</li>
-					<li>
-						<a href="">
-							<img src="img/20160719_007.jpg"/>
-							<p></p>
-						</a>
-					</li>
-					<li>
-						<a href="">
-							<img src="img/20160719_008.jpg"/>
-							<p></p>
-						</a>
-					</li>
-					<li>
-						<a href="">
-							<img src="img/20160719_009.jpg"/>
-							<p></p>
-						</a>
-					</li>
-					<li>
-						<a href="">
-							<img src="img/20160719_010.jpg"/>
-							<p></p>
-						</a>
-					</li>
-					<li>
-						<a href="">
-							<img src="img/20160719_011.jpg"/>
-							<p></p>
-						</a>
-					</li>
-					<li>
-						<a href="">
-							<img src="img/20160719_012.jpg"/>
-							<p></p>
-						</a>
-					</li>
-					<li>
-						<a href="">
-							<img src="img/20160719_013.jpg"/>
-							<p></p>
-						</a>
-					</li>
-					<li>
-						<a href="">
-							<img src="img/20160719_014.jpg"/>
-							<p></p>
-						</a>
-					</li>
-					<li>
-						<a href="">
-							<img src="img/20160719_015.jpg"/>
-							<p></p>
-						</a>
-					</li>
-					<li>
-						<a href="">
-							<img src="img/20160719_016.jpg"/>
-							<p></p>
-						</a>
-					</li>
-				</ul>
-				<h3><a href=""><img src="img/fonud_m.jpg"/></a></h3>
 			</div>
 		</div>
 	</div>
-	<!--尾部-->
+	<!--头部结束-->
+		<!--尾部-->
 	<div class="footer_wrap">
 		<div class="footer">
 			<div class="service_info">
@@ -1666,19 +1354,9 @@
 				深圳走秀网络科技有限公司 版权所有 . 
 				<a href="">粤ICP备07502993号</a>
 			</p>
-			<div class="des_div">
-				<a href=""><img src="img/c_01.jpg"></a>
-				<a href=""><img src="img/c_02.jpg"></a>
-				<a href=""><img src="img/c_03.jpg"></a>
-				<a href=""><img src="img/c_04.jpg"></a>
-				<a href=""><img src="img/c_05.jpg"></a>
-				<a href=""><img src="img/c_06.jpg"></a>
-				<a href=""><img src="img/c_08.jpg"></a>
-				<a href=""><img src="img/c_09.jpg"></a>
-				<a href=""><img src="img/c_10.jpg"></a>
-			</div>
+			
 		</div>
 		
-	</div>
+	
 </body>
 </html>

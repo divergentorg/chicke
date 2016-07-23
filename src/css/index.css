@@ -1,213 +1,216 @@
-body{
-	margin:0;
-	font-size:12px;
-    color:#000;
-    padding: 0;
+
+.content{
+	width:100%;
+	min-width: 1200px;
+	margin:0 auto;
+	z-index: 1;
 }
-ul,input{
-	margin:0;
-	padding: 0;
+.content_box{
+	width:1200px;
+	margin:0 auto;
+	padding:20px 0 30px;
+	overflow: hidden;
+	position: relative;
+
 }
-li{
-	list-style:none;
+.content_banner{
+	width: 1200px;
+	height: 610px;
+	margin: 0 auto;
+	padding: 0 0 20px;
+	position: relative;
+	overflow: hidden;
 }
-input{
+.content_banner1{
+	width: 1200px;
+	height: 610px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+img{
+	vertical-align: middle;
 	border:0;
 }
-a{
-	text-decoration: none;
-}	
-
-#header{
-	width:100%;
-	background-color:#333;
-	height:93px
+.content_shortcut{
+	width: 1170px;
+	margin: 0 auto;
+	height: 86px;
+	padding: 0 0 20px 30px;
 }
-.header{
-	height:93px;
+.content_shortcut a{
+	float: left;
+	display: block;
+	width: 250px;
+	height: 86px;
+	margin: 0 60px 0 0;
+	background: url(../img/shortcut3.jpg) no-repeat;
+}
+.content_shortcut .shortcut4{
+	width:215px;
+	margin:0;
+}
+.content_shortcut .shortcut1{
+	background-position: 0 0;
+}
+.content_shortcut .shortcut1:hover{
+	background-position: -8px 0;
+}
+.content_shortcut .shortcut2{
+	background-position: -250px 0;
+}
+.content_shortcut .shortcut2:hover{
+	background-position: -258px 0;
+}
+.content_shortcut .shortcut3{
+	background-position: -745px 0;
+}
+.content_shortcut .shortcut3:hover{
+	background-position: -747px 0;
+}
+.content_shortcut .shortcut4{
+	background-position: -985px 0;
+}
+.content_shortcut .shortcut4:hover{
+	background-position: -993px 0;
+}
+.content_goods{
 	width:1200px;
 	margin:0 auto;
 }
-.header_main{
-	width:1200px;
-	height:83px;
-	padding-top:10px;
-
+.content_goods h3{
+	padding:0 0 20px;
+	text-align:center;
 }
-.header_main1{
-	float:left;
-	position:relative;
-	z-index: 5;
+.content_goods ul{
+	overflow: hidden;
+	margin:0 0 40px;
 }
-.header_left{
-	float:left;
+.content_goods ul li{
+	margin:0;
 	width:400px;
-	margin:-8px 0 0;
-}
-.headerlist{
-	height:34px;
-	line-height:34px;
-	z-index: 5;
 	float: left;
 }
-
-.headerlist li{
-	color:#d7d7d7;
-	float:left;
-}
-.headerlist a{
-	padding:0 5px;
-	display:inline-block;
-	text-decoration:none;
-	color:#d7d7d7;
-}
-.headerlist a:hover{
-	color:#fff;
-}
-.indx{
-	color:#f78407;
-}
-
-#my_bag{
-	display: none;
-	position: absolute;
-	top: 34px;
-	left: 5px;
-	z-index: 998;
-	border-bottom: 1px solid #e5e4e4;
-	border-right: 1px solid #e5e4e4;
-	border-left: 1px solid #e5e4e4;
-	background: #FFF;
-}
-.headerlist li.relax{
-	z-index: 4;
-	padding:0 6px 0 4px;
-	position:relative;
-}
-.header li.my_bag a{
-	padding: 0px 4px 0px 26px;
-	border: 1px solid #333;
-	border-bottom: none;
-	background: url(img/spriter2016.png) no-repeat -215px -40px;
-	z-index: 999;
-}
-.headerlist li .my_Bag{
-	position: absolute;
-	top: 34px;
-	left: 4px;
-	z-index: 998;
-	border-right: 1px solid #e5e4e4;
-	border-left: 1px solid #e5e4e4;
-	border-bottom: 1px solid #e5e4e4;
-	background: #FFF;
-	width: 280px;
-	padding: 15px 8px 8px;
-	color:#000;
-}
-.headerlist li.my_xiu{
-	height:34px;
-	padding: 0 6px 0 0px;
-	cursor:pointer;
-	
-}
-.headerlist li.my_xiu a.down{
-	padding: 0px 15px 0px 10px;
-	background:red;
-	border-bottom: none;
-	border-top: none;
-	background: url(img/spriter2016.png) no-repeat right -108px;
-	z-index: 999;
-}
-.headerlist li.my_xiu a.down:hover{background: url(img/jt2_03.jpg) no-repeat right -108px;}
-
-.headerlist li .myXiu_menu{
-	display:none;
-	position: absolute;
-	top: 34px;
-	left: 0;
-	z-index: 998;
-	border: 1px solid #d7d7d7;
-	background-color: #FFF;
-	width: 73px !important;
-	padding-bottom: 8px;
-	border-top: none;
-	margin-left:158px;
-	margin-top:-8px;
-}
-.headerlist li .myXiu_menu a{
-	color: #464545;
+.content_goods ul li a{
 	display: block;
-	overflow: hidden;
-	line-height: 25px;
-	padding-left: 10px;
-}
-.headerlist li{
-	display:inline;
-}
-.header_img{
-	width: 212px;
-	position: absolute;
-	left: 50%;
-	top: 0;
-	margin: 10px 0 0 -106px
-}
-.header_img a{
-	display: block;
-	width: 212px;
-	height: 32px;
-}
-.sousuo{
-	width:261px;
-	height:26px;
-	border:1px solid #787878;
-}
-#sousuo{
-	background-color:#333;
-	color:#787878;
-}
-#header_form{
-	width:261px;
-	height:26px;
-}
-#header_sousuo{
-	width:228px;
-	line-height:26px;
-	padding-left:9px;
-}
-#btnS{
-	width:24px;
-	height:26px;
-	float:right;
-	background:url(img/sousuo.jpg);
-	cursor: pointer;
-}
-.header_bottom{
-	height:44px;
-	width:1200px;
-	margin-top:37px;
+	width: 100%;
+	height: 100%;
 	position: relative;
+	background: #fff;
+	line-height: 0;
 }
-#bottom_list{
-	width:696px;
+
+.content_beats{
+	width:1200px;
+	margin:0 auto;
+}
+.content_beats h3{
+	padding:0 0 20px;
+	text-align:center;
+}
+.content_beats ul{
+	overflow: hidden;
+}
+.content_beats ul li{
+	float: left;
+	width: 600px;
+	height:300px;
+	margin: 0 0 40px;
+}
+.content_beats ul li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	color: #fff;
+	line-height: 0;
+}
+.content_beats ul li a .pic{
+	width: 600px;
+	height: 300px;
+	vertical-align: middle;
+}
+.content_beats ul li a p{
 	position: absolute;
-	left:50%;
-	margin-left:-348px;
-	height:44px;
-}
-#bottom_list li{
-	display:inline-block;
-	width:73px;
-	height:44px;
+	left: 0;
+	top: 50%;
+	width: 100%;
+	height: 80px;
+	margin: -40px 0 0;
 	text-align: center;
 }
-#bottom_list li a{
-	display:block;
-	height:44px;
-	color:#fff;
-	font-size:14px;
-	line-height:44px;
+.content_sale{
+	width:1200px;
+	margin:20px 0 auto;
 }
-#bottom_list li#list_last{
-	width:90px;
-	float:right;
+.content_sale h3{
+	padding:0 0 20px;
+	text-align: center;
+}
+.content_sale li{
+	float: left;
+	width: 400px;
+	height:300px;
+	margin: 0 0 40px;
+}
+.content_sale li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	line-height: 0;
+}
+.content_sale .pic{
+	width:400px;
+	height:300px;
+}
+.content_sale li a p{
+	position: absolute;
+	left: 0;
+	bottom: 20px;
+}
+.clear{
+	clear:both;
+}
+.content_auto{
+	width: 1200px;
+	margin: 0 auto;
+	padding: 20px 0 50px;
+	overflow: hidden;
+}
+.content_auto a{
+	display: block;
+	background: #fff;
+}
+.content_auto img{
+	opacity: 1;
+}
+.content_find h3{
+    padding: 0 0 20px;
+    text-align: center;
+}
+.find_list{
+	width: 1217px;
+	overflow: hidden;
+	margin: 0 auto 20px;
+}
+.find_list li{
+	float: left;
+	width: 287px;
+	margin: 0 17px 20px 0;
+}
+.find_list li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.find_list li a p{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 285px;
+	height: 488px;
+	border: 1px solid #efefef;
 }
