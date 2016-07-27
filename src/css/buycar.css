@@ -1,0 +1,144 @@
+body, html {
+    height: 100%;
+}
+body, dl, dt, dd, ol, ul, h1, h2, h3, h4, h5, form, fieldset, input, textarea, buttom, blockquote, pre, p, td, th {
+    margin: 0;
+    padding: 0;
+}
+body, input, option, buttom, select, textarea, table {
+    font: 12px/1.5 tahoma, arial, 宋体, sans-serif;
+}
+a {
+    color: #5b5b5b;
+    text-decoration: none;
+}
+ul, ol {
+    list-style-type: none;
+}
+.wares_div .wartab_div .war_tab1 tr th {
+    height: 32px;
+    text-align: center;
+    color: #fff;
+    background-position: 0 -73px;
+    background-repeat: repeat-x;
+    font-weight: normal;
+}
+table {
+    border-collapse: collapse;
+}
+.free-ship, .inventory_shortage, .promotion, .xiuPop .payWinCon dl dt a, .bfd_contentbox .bfd_img_logo, .bfd_box h1, .bfd_box .bfd_next_btn, .bfd_box .bfd_pre_btn, .indent_Not .form_suc .sc, .war_cannt_but, .shop_list .st_ul .sli_on, .shop_list .st_ul .sli_of, .shop_list .st_ul .sli_un, .shop_list .st_ul .sli_l, .pro .cr, .wares_div .wartab_div .war_tab th, .wares_div .wartab_div .war_c, .wares_div .wartab_div .war_s, .war_but, .war_bdel, .item_ul .itemdiv .item_a a, .setted_d span.continue_sel b, .setted_d span.sel_spa b, .setted_d .set_str, .set_far b, .add_address .addh2_bg, .isBut_Div .isbut_t, .isBut_Div .isbut_b, .isBut_Div .isbut_w, .isBut_Div .isbut_wb, .add_address .favorable_d .on, .add_address .favorable_d .out, .add_address .subinit strong, .add_address .subinit .sum .sum_sure, .add_address .d_dl .on, .add_address .d_dl .out, .indent_Not .form_suc .st, .shop_list .st_ul .sli_b, .add_address h2.addh2_bg .return, .add_address h2.addh2_bg .add, .add_address h2.addh2_bg .return a, .add_address h2.addh2_bg .add a, .add_address h2.addh2_bg .address_bg, .add_address h2.addh2_bg .address_bg a, .add_address .war_bdel a, .add_address h2.addh2_bg .all_elments a, .shop_list h4.indent_line .s_bg, .setted_d span.aging a b {
+    background: url(../img/s_shop1.gif) 0 0 no-repeat;
+}
+.shop_list .st_ul .sli_on, .shop_list .st_ul .sli_of, .shop_list .st_ul .sli_un, .shop_list .st_ul .sli_l, .shop_list .st_ul span.sli_b {
+    width: 27px;
+    height: 32px;
+    float: right;
+    overflow: hidden;
+    position: relative;
+    margin-top: -4px;
+}
+.my_shoppingCart, .wares_div, .setted_d, .add_address, .indent_Not {
+    width: 950px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.s_shoppingLine {
+    border-bottom: 1px solid #000;
+}
+.s_header {
+    width: 950px;
+    margin: 0 auto;
+    background: #fff;
+    height: 64px;
+    padding-top: 12px;
+    z-index: 99;
+}
+body {
+    color: #5b5b5b;
+}
+.rela {
+    position: relative;
+}
+.s_header .s_logo {
+    height: 59px;
+    width: 194px;
+    margin-left: 13px;
+}
+.s_header .s_logo a {
+    height: 59px;
+    width: 194px;
+    overflow: hidden;
+    display: block;
+}
+.s_header .s_logo b {
+    background: url(../img/s_05.png) no-repeat;
+    width: 194px;
+    height: 59px;
+    left: 0;
+    top: 0;
+}
+.abso {
+    position: absolute;
+}
+.s_header .s_column {
+    right: 10px;
+    top: 15px;
+    width: 600px;
+    text-align: right;
+    color: #151515;
+}
+.s_header .s_column p {
+    height: 20px;
+    display: block;
+}
+.s_header .s_column .s_mar, .s_mar {
+    margin-bottom: 15px;
+}
+.s_header .s_column .s_mar a, .s_mar a {
+    float: right;
+    padding: 0 10px;
+}
+.s_header .s_column .s_mar b, .s_mar b {
+    font-size: 16px;
+    color: #F26521;
+    line-height: 18px;
+}
+.shop_list {
+    height: 40px;
+    padding-top: 15px;
+}
+.shop_list .st_ul {
+    width: 950px;
+    height: 33px;
+    margin: 0 auto;
+}
+.shop_list .st_ul li {
+    float: left;
+    width: 316px;
+    background: #e2e2e2;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.shop_list .st_ul .sli_bg {
+    background: #82bf38;
+    color: #fff;
+}
+.shop_list .st_ul span.sli_on {
+    background-position: 0 0;
+}
+.shop_list .st_ul span.sli_of {
+    background-position: -27px 0;
+}
+div.wares_div {
+    overflow: visible;
+}
+.wares_div .wartab_div .war_tab1 {
+    width: 100%;
+    border: 1px solid #d6d3d3;
+}
+.wares_div .wartab_div .war_tab1 input {
+    vertical-align: middle;
+}

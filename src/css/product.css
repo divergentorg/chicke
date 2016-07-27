@@ -35,8 +35,16 @@
 .big_map{
 	border: 1px solid #ccc;
 	position: relative;
-	padding: 5px;
+	
 	height: 536px;
 	width: 402px;
 	z-index: 1;
+}
+img{
+	vertical-align: middle;
+	border:0;
+}
+.bpd{
+	border: 1px solid #999;
+	background: #fff;
 }

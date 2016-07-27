@@ -4,163 +4,168 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" type="text/css" href = "../css/public.css"/>
-	<link rel="stylesheet" type="text/css" href = "../css/product.css"/>
+	<link rel="stylesheet" type="text/css" href = "../css/product_list.css"/>
 	<script type="text/javascript" src="../js/jquery-1.12.0.js"></script>
 	<script type="text/javascript">
 		$(function(){
-			$('.my_bag').on('mouseenter',function(){
-				$('#my_bag').css({
-					display:'block'
-				})
-				$('#new_bag').css({
-					color:'red',
-					backgroundColor:'#fff'
-				})
-			});
-			$('.my_bag').on('mouseleave',function(){
-				$('#my_bag').css({
-					display:'none'
-				})
-				$('#new_bag').css({
-					color:'#d7d7d7',
-					backgroundColor:'#333'
-				})
-			});
-			$('#mine').on('mouseenter',function(){
-				$('#xiuurl').css({
-					backgroundColor: '#fff',
-					borderLeft:'1px solid #d7d7d7',
-					borderRight:'1px solid #d7d7d7',
-					color:'red',
-				})
-				$('#my_xiu').css({
-					display:'block'
-				})
-			});
-			$('#mine').on('mouseleave',function(){
-				$('#my_xiu').css({
-					display:'none'
-				})
-				$('#xiuurl').css({
-					'background-color': '#333333',
-					'borderLeft':0,
-					'borderRight':0,
-					color:'#d7d7d7'
-				})
-			});
-			$('.a1').on('mouseenter',function(){
+			$('#catSecondItem').find('li').on('mouseenter',function(){		
+				$(this).find('a').css({
+						color:'#fff',
+						backgroundColor:'#e97013'
+				})	
+			})
+			$('#catSecondItem').find('li').on('mouseleave',function(){		
+				$(this).find('a').css({
+						color: '#6e6c6d',
+						backgroundColor:'#fff'
+				})	
+			})
+			$('.a1').on("mouseenter",function(){
 				$(this).css({
-					color:'red'
+					color:'#f60'
 				})
-			});
-			$('.a1').on('mouseleave',function(){
+				$(this).find('i').css({
+					background: 'url(../img/xsearchico20120615.png?__=20120803) no-repeat 0 -280px'
+				})
+			})
+			$('.a1').on("mouseleave",function(){
 				$(this).css({
 					color:'#000'
 				})
-			});
-			$('#header_sousuo').on('focus',function(){
-				if($(this).val()=='请搜索Stella McCartney试试'){
-					$(this).val('')
-				}
-			});
-			$('#header_sousuo').on('blur',function(){
-				$(this).val('请搜索Stella McCartney试试')
-			});
-			$('#bottom_list').find('li').on('mouseenter',function(){
+				$(this).find('i').css({
+					background: 'url(../img/xsearchico20120615.png?__=20120803) no-repeat 0 -240px'
+				})
+			})
+			
+			$('.a2').on("mouseenter",function(){
 				$(this).css({
-					borderBottom:'2px solid gray'
+					color:'#f60'
 				})
-				$(this).find('a').css({
-					color:'#d7d7d7'
+				$(this).find('i').css({
+					background: 'url(../img/xsearchico20120615.png?__=20120803) no-repeat 0 -300px'
 				})
 			})
-			$('#bottom_list').find('li').on('mouseleave',function(){
+			$('.a2').on("mouseleave",function(){
 				$(this).css({
-					borderBottom:'0'
-				})
-				$(this).find('a').css({
-					color:'#fff'
-				})
-			})
-			$('#bottom_list2').find('li').on('mouseenter',function(){
-				$(this).css({
-					borderBottom:'2px solid gray'
-				})
-				$(this).find('a').css({
-					color:'#d7d7d7'
-				})
-			})
-			$('#bottom_list2').find('li').on('mouseleave',function(){
-				$(this).css({
-					borderBottom:'0'
-				})
-				$(this).find('a').css({
-					color:'#fff'
-				})
-			})
-			$(window).scroll(function(){
-				var $gdl = $(this).scrollTop()
-				if($gdl>156){
-					$('.header_hide').css({
-						display:'block'
-					});
-					$('.nav_wrap').addClass('fixed-top2')
-				}else if($gdl<156){
-					$('.header_hide').css({
-						display:'none'
-					});
-					$('.nav_wrap').removeClass('fixed-top2')
-				}
-			})
-			$('.li_left_1').find('h4').on('mouseenter',function(){
-				$(this).children('a').css({
-					color:'orange'
-				})
-			});
-			$('.li_left_1').find('h4').on('mouseleave',function(){
-				$(this).children('a').css({
 					color:'#000'
 				})
-			})
-			$('.bao_listT').find("li").on('mouseenter',function(){
-				$(this).children('a').addClass('li_change')
-			})
-			$('.bao_listT').find("li").on('mouseleave',function(){
-				$(this).children('a').removeClass('li_change')
-			})
-			$('#li_right_list').find("li").on('mouseenter',function(){
-				$(this).children('a').addClass('li_change')
-			})
-			$('#li_right_list').find("li").on('mouseleave',function(){
-				$(this).children('a').removeClass('li_change')
-			})
-			$('.nav_list1').on('mouseenter',function(){
-				$(this).find('.li_hide').css({
-					display:'block'
+				$(this).find('i').css({
+					background: 'url(../img/xsearchico20120615.png?__=20120803) no-repeat 0 -260px'
 				})
+			})
+			$('.xs-itemsul-img').children('li').on('mouseenter',function(){
+				$(this).addClass('curr')
+				$(this).find('.sold_size').stop().animate({
+					top:'-69px'
+				})
+			})
+			$('.xs-itemsul-img').children('li').on('mouseleave',function(){
+				$(this).removeClass('curr')
+				$(this).find('.sold_size').stop().animate({
+					top:'0px'
+				})
+			})
+			$('.Pagenum').children('a').on('mouseenter',function(){
 				$(this).css({
-					borderTop:'1px solid #d7d7d7',
-					borderRight:'1px solid #d7d7d7',
-					borderLeft:'1px solid #d7d7d7',
-					background:'#fff'
+					color:'#f60',
+					border:'1px solid #f60'
 				})
 			})
-			$('.nav_list1').on('mouseleave',function(){
-				$(this).find('.li_hide').css({
-					display:'none'
-				})
+			$('.Pagenum').children('a').on('mouseleave',function(){
 				$(this).css({
-					borderTop:'1px solid #f7f7f7',
-					borderRight:'1px solid #f7f7f7',
-					borderLeft:'1px solid #f7f7f7',
-					background:'#f7f7f7'
+					color:'#000',
+					border:'1px solid #888',
+					backgroundPosition:'left:5px top:-433px'
 				})
 			})
-			$('.imgDiv').on('mousemove',function(e){
-				$('#showing').css({
-					top:(100+e.offsetY)+'px',
-					left:(100+e.offsetX)+'px'
+			$('.pre-page').on('mouseenter',function(){
+				 $(this).addClass('pre-move')		 
+			})
+			$('.pre-page').on('mouseleave',function(){
+				 $(this).removeClass('pre-move')		 
+			})
+			$('.next-page').on('mouseenter',function(){
+				 $(this).addClass('next-move')		 
+			})
+			$('.next-page').on('mouseleave',function(){
+				 $(this).removeClass('next-move')		 
+			})
+			run();
+			var interval;
+			function run(){
+				interval = setInterval(chat,"3000");
+			} 
+			function chat(){
+				var nowleft = parseInt($('#move-list').css('left'))
+				if(nowleft<=-2844){
+					nowleft=0
+					$('#move-list').animate({
+						left:0
+					},'fast')
+				}else{
+					$('#move-list').animate({
+						left:(nowleft-948)+'px'
+						
+					})
+				}	
+			}
+			$('.back').on('click',function(){
+				var nowleft = parseInt($('#move-list').css('left'))
+				if(nowleft>=0){
+					nowleft=-2844
+					$('#move-list').animate({
+						left:nowleft
+					},'fast')
+				}else{
+					$('#move-list').animate({
+						left:(nowleft+948)+'px'						
+					})
+				}				
+			})
+			$('.forward').on('click',function(){
+				var nowleft = parseInt($('#move-list').css('left'))
+				if(nowleft<=-2844){
+					nowleft=0
+					$('#move-list').animate({
+						left:0
+					},'fast')
+				}else{
+					$('#move-list').animate({
+						left:(nowleft-948)+'px'	
+					})
+				}		
+			})
+			$('.xs-salexiurecom-bottombox').on('mouseenter',function(){
+				clearInterval(interval)
+			})
+			$('.xs-salexiurecom-bottombox').on('mouseleave',function(){
+				interval = setInterval(chat,"3000");
+			})
+			$('.back').on('mouseenter',function(){
+				$(this).css({
+					backgroundPosition:'left -747px' 
 				})
+			})
+			$('.back').on('mouseleave',function(){
+				$(this).css({
+					backgroundPosition:'left -823px' 
+				})
+			})
+			$('.forward').on('mouseenter',function(){
+				$(this).css({
+					backgroundPosition:'-25px -747px' 
+				})
+			})
+			$('.forward').on('mouseleave',function(){
+				$(this).css({
+					backgroundPosition:'-25px -823px' 
+				})
+			})
+			$('.backtop').on('click',function(){
+				$('html,body').animate({
+					scrollTop:'0'
+				},'slow')
+				
 			})
 		})
 	</script>
@@ -1263,39 +1268,1248 @@
 		</div>
 	</div>
 	<!--商品详情-->
-	<div class="main">
-		<div class="product_header">
-			你的位置：
-			<span id="positionbox">
-				<a href="">走秀首页</a>
-				>
-				<a href="">男装</a>
-				>
-				<a href="">上装</a>
-				>
-				<a href="">衬衫</a>
-				>
-				<span class="positionPrdName">男士印花纯棉衬衫</span>
-			</span>
+	<!--商品列表-->
+	<div class="xs-banner-topmid">
+		<a href=""><img src="../img/product-list-banner.jpg"/></a>
+	</div>
+	<div class="xs-crumb">
+		<label class="hd">你的位置：</label>
+		<ul id="crumbBar" class="tabs">
+			<li class="no_dropdown first">
+				<a href="">全部结果</a>
+				<i></i>
+			</li>
+			<li class="no_dropdown">
+				<span class="no_active_label">Stella McCartney</span>
+			</li>
+		</ul>
+		<div class="totalcount">
+			总共
+			<span class="p12 pr3 cred">483</span>
+			件商品
 		</div>
-		<div class="pro_content">
-			<div class="con_main">
-				<div class="p_map">
-					<div class="big_map">
-						<div class="imgDiv" style="position:relative;display:inline-block;textDecoration:none;outline:0pt none;width:402px;height: 536px;text-decoration:none;">
-							<img id="imgPic" src="../img/g1_402_536.jpg"/>
-							<div id="showing" class="XMag" style="cursor:move;z-index:101;position:absolute;overflow:hidden;width:200px;height:200px;opacity:0.5;top:0;left:0;display:block;backgroundcolor:red;"></div>
-							<img id="imgPicMask" src="../img/g1_402_536.jpg" style="position: absolute;top: 0px;left: 0px;display: none;z-index: 1;"/>
-							<div id="bigPicDiv" class="bpd" style="overflow: hidden;z-index: 100;top: 0px;position: absolute;width: 402px;height: 536px;opacity: 1;left: 415px;display: block;">
-							<img id="bigPic" src="../img/g1_900_1200.jpg" style="padding: 0px;margin: 0px;border: 0px none;position: relative;"/>
-							</div>							
+		<b class="icarr"></b>
+	</div>
+	<div class="xs-relatetermbox xs-bg">
+		<label class="hd">相关搜索：</label>
+		<div class="bd">
+			<a href="" class="first">stella mccartney单肩包</a>
+			<a href="" class="">stella mccartney单肩包</a>
+			<a href="" class="">stella mccartney单肩包</a>
+			<a href="" class="">stella mccartney单肩包</a>
+			<a href="" class="">stella mccartney单肩包</a>
+			<a href="" class="">stella mccartney单肩包</a>
+		</div>
+	</div>
+	<div id="catalogTire" class="xs-facetbox">
+		<div id="facet-box" class="facet-bd">
+			<div class="facet-line brand-facet-box fl_box">
+				<label class="line-hd">分类：</label>
+				<div class="line-bd">
+					<div class="normal-item-box">
+						<div>
+							<ul id="catSecondItem" class="clearfix">
+								<li>
+									<a href="">女装</a>
+								</li>
+								<li>
+									<a href="">包袋</a>
+								</li>
+								<li>
+									<a href="">鞋靴</a>
+								</li>
+								<li>
+									<a href="">婴童</a>
+								</li>
+								<li>
+									<a href="">饰品</a>
+								</li>
+								<li>
+									<a href="">男装</a>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!--头部结束-->
+	<div class="xs-mainsection clearfix">
+		<div class="xs-filterbox clearfix">
+			<div class="xs-toolbar">
+				<div class="showmode"></div>
+				<div class="xs-sort-bar">
+					<dl id="sortbox" class="sort-box">
+						<dd>
+							<a href=""  class="nonearr active" rel="nofollow">默认</a>
+						</dd>
+							<a href="" class="a1" rel="nofollow">
+						<dd>
+								价格
+								<i class=""></i>
+							</a>
+						</dd>
+						<dd>
+							<a href="" class="a2" rel="nofollow">
+								折扣
+								<i class="down"></i>
+							</a>
+						</dd>
+						<dd>
+							<a href="" class="a2" rel="nofollow">
+								上架时间
+								<i class="down"></i>
+							</a>
+						</dd>
+					</dl>
+				</div>
+				<div class="fh-box">
+					<label>发送方式：</label>
+					<ul>
+						<li>
+							<label for="all">
+								<input id="all" type="radio" checked="checked" name="itemshowtype"/>
+								全部
+							</label>
+						</li>
+						<li>
+							<label for="foreign">
+								<input id="foreign" type="radio" name="itemshowtype"/>
+								海外发货
+							</label>
+						</li>
+						<li>
+							<label for="home">
+								<input id="home" type="radio" name="itemshowtype"/>
+								国内发货
+							</label>
+						</li>
+					</ul>
+				</div>
+				<div class="xs-minpage">
+					<ul>
+						<li class="pagenum">1/1</li>
+						<li class="disable">
+							<a href="" class="l_page">上一页</a>
+						</li>
+						<li class="disable">
+							<a href="" class="r_page">上一页</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="xs-section">
+			<div id="j_filterbox" class="xs-main">
+				<div id="j-itemListBox" class="xs-itemsbox" style="padding-bottom:20px">
+					<ul class="xs-itemsul-img clearfix">
+						<li class="item">
+							<ol>
+								<li class="pic">
+									<a href="">
+										<img style="display:inline" src="../img/g1_234_312_006.jpg"/>
+									</a>
+									<div class="sold_size" style="top:0">
+										<p class="sold_side_tit">可售尺码：</p>
+										<ul class="sold_side_list clearfix">
+											<li class="ssl_item">
+												<span>IT42</span>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="tit">
+									<span>Stella McCartney</span>
+									<a href="">女士花朵衬衫</a>
+								</li>
+								<li class="price">
+									<span class="showprice">1290</span>
+									<span class="delprice">4999</span>
+								</li>
+							</ol>
+						</li>
+						<li class="item">
+							<ol>
+								<li class="pic">
+									<a href="">
+										<img style="display:inline" src="../img/g1_234_312_006.jpg"/>
+									</a>
+									<div class="sold_size" style="top:0">
+										<p class="sold_side_tit">可售尺码：</p>
+										<ul class="sold_side_list clearfix">
+											<li class="ssl_item">
+												<span>IT42</span>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="tit">
+									<span>Stella McCartney</span>
+									<a href="">女士花朵衬衫</a>
+								</li>
+								<li class="price">
+									<span class="showprice">1290</span>
+									<span class="delprice">4999</span>
+								</li>
+							</ol>
+						</li>
+						<li class="item">
+							<ol>
+								<li class="pic">
+									<a href="">
+										<img style="display:inline" src="../img/g1_234_312_006.jpg"/>
+									</a>
+									<div class="sold_size" style="top:0">
+										<p class="sold_side_tit">可售尺码：</p>
+										<ul class="sold_side_list clearfix">
+											<li class="ssl_item">
+												<span>IT42</span>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="tit">
+									<span>Stella McCartney</span>
+									<a href="">女士花朵衬衫</a>
+								</li>
+								<li class="price">
+									<span class="showprice">1290</span>
+									<span class="delprice">4999</span>
+								</li>
+							</ol>
+						</li>
+						<li class="item" style="margin-right:0;">
+							<ol>
+								<li class="pic">
+									<a href="">
+										<img style="display:inline" src="../img/g1_234_312_006.jpg"/>
+									</a>
+									<div class="sold_size" style="top:0">
+										<p class="sold_side_tit">可售尺码：</p>
+										<ul class="sold_side_list clearfix">
+											<li class="ssl_item">
+												<span>IT42</span>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="tit">
+									<span>Stella McCartney</span>
+									<a href="">女士花朵衬衫</a>
+								</li>
+								<li class="price">
+									<span class="showprice">1290</span>
+									<span class="delprice">4999</span>
+								</li>
+							</ol>
+						</li>
+						<li class="item">
+							<ol>
+								<li class="pic">
+									<a href="">
+										<img style="display:inline" src="../img/g1_234_312_006.jpg"/>
+									</a>
+									<div class="sold_size" style="top:0">
+										<p class="sold_side_tit">可售尺码：</p>
+										<ul class="sold_side_list clearfix">
+											<li class="ssl_item">
+												<span>IT42</span>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="tit">
+									<span>Stella McCartney</span>
+									<a href="">女士花朵衬衫</a>
+								</li>
+								<li class="price">
+									<span class="showprice">1290</span>
+									<span class="delprice">4999</span>
+								</li>
+							</ol>
+						</li>
+						<li class="item">
+							<ol>
+								<li class="pic">
+									<a href="">
+										<img style="display:inline" src="../img/g1_234_312_006.jpg"/>
+									</a>
+									<div class="sold_size" style="top:0">
+										<p class="sold_side_tit">可售尺码：</p>
+										<ul class="sold_side_list clearfix">
+											<li class="ssl_item">
+												<span>IT42</span>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="tit">
+									<span>Stella McCartney</span>
+									<a href="">女士花朵衬衫</a>
+								</li>
+								<li class="price">
+									<span class="showprice">1290</span>
+									<span class="delprice">4999</span>
+								</li>
+							</ol>
+						</li>
+						<li class="item">
+							<ol>
+								<li class="pic">
+									<a href="">
+										<img style="display:inline" src="../img/g1_234_312_006.jpg"/>
+									</a>
+									<div class="sold_size" style="top:0">
+										<p class="sold_side_tit">可售尺码：</p>
+										<ul class="sold_side_list clearfix">
+											<li class="ssl_item">
+												<span>IT42</span>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="tit">
+									<span>Stella McCartney</span>
+									<a href="">女士花朵衬衫</a>
+								</li>
+								<li class="price">
+									<span class="showprice">1290</span>
+									<span class="delprice">4999</span>
+								</li>
+							</ol>
+						</li>
+						<li class="item" style="margin-right:0;">
+							<ol>
+								<li class="pic">
+									<a href="">
+										<img style="display:inline" src="../img/g1_234_312_006.jpg"/>
+									</a>
+									<div class="sold_size" style="top:0">
+										<p class="sold_side_tit">可售尺码：</p>
+										<ul class="sold_side_list clearfix">
+											<li class="ssl_item">
+												<span>IT42</span>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="tit">
+									<span>Stella McCartney</span>
+									<a href="">女士花朵衬衫</a>
+								</li>
+								<li class="price">
+									<span class="showprice">1290</span>
+									<span class="delprice">4999</span>
+								</li>
+							</ol>
+						</li>
+						<li class="item">
+							<ol>
+								<li class="pic">
+									<a href="">
+										<img style="display:inline" src="../img/g1_234_312_006.jpg"/>
+									</a>
+									<div class="sold_size" style="top:0">
+										<p class="sold_side_tit">可售尺码：</p>
+										<ul class="sold_side_list clearfix">
+											<li class="ssl_item">
+												<span>IT42</span>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="tit">
+									<span>Stella McCartney</span>
+									<a href="">女士花朵衬衫</a>
+								</li>
+								<li class="price">
+									<span class="showprice">1290</span>
+									<span class="delprice">4999</span>
+								</li>
+							</ol>
+						</li>
+						<li class="item">
+							<ol>
+								<li class="pic">
+									<a href="">
+										<img style="display:inline" src="../img/g1_234_312_006.jpg"/>
+									</a>
+									<div class="sold_size" style="top:0">
+										<p class="sold_side_tit">可售尺码：</p>
+										<ul class="sold_side_list clearfix">
+											<li class="ssl_item">
+												<span>IT42</span>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="tit">
+									<span>Stella McCartney</span>
+									<a href="">女士花朵衬衫</a>
+								</li>
+								<li class="price">
+									<span class="showprice">1290</span>
+									<span class="delprice">4999</span>
+								</li>
+							</ol>
+						</li>
+						<li class="item">
+							<ol>
+								<li class="pic">
+									<a href="">
+										<img style="display:inline" src="../img/g1_234_312_006.jpg"/>
+									</a>
+									<div class="sold_size" style="top:0">
+										<p class="sold_side_tit">可售尺码：</p>
+										<ul class="sold_side_list clearfix">
+											<li class="ssl_item">
+												<span>IT42</span>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="tit">
+									<span>Stella McCartney</span>
+									<a href="">女士花朵衬衫</a>
+								</li>
+								<li class="price">
+									<span class="showprice">1290</span>
+									<span class="delprice">4999</span>
+								</li>
+							</ol>
+						</li>
+						<li class="item" style="margin-right:0;">
+							<ol>
+								<li class="pic">
+									<a href="">
+										<img style="display:inline" src="../img/g1_234_312_006.jpg"/>
+									</a>
+									<div class="sold_size" style="top:0">
+										<p class="sold_side_tit">可售尺码：</p>
+										<ul class="sold_side_list clearfix">
+											<li class="ssl_item">
+												<span>IT42</span>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="tit">
+									<span>Stella McCartney</span>
+									<a href="">女士花朵衬衫</a>
+								</li>
+								<li class="price">
+									<span class="showprice">1290</span>
+									<span class="delprice">4999</span>
+								</li>
+							</ol>
+						</li>
+						<li class="item">
+							<ol>
+								<li class="pic">
+									<a href="">
+										<img style="display:inline" src="../img/g1_234_312_006.jpg"/>
+									</a>
+									<div class="sold_size" style="top:0">
+										<p class="sold_side_tit">可售尺码：</p>
+										<ul class="sold_side_list clearfix">
+											<li class="ssl_item">
+												<span>IT42</span>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="tit">
+									<span>Stella McCartney</span>
+									<a href="">女士花朵衬衫</a>
+								</li>
+								<li class="price">
+									<span class="showprice">1290</span>
+									<span class="delprice">4999</span>
+								</li>
+							</ol>
+						</li>
+						<li class="item">
+							<ol>
+								<li class="pic">
+									<a href="">
+										<img style="display:inline" src="../img/g1_234_312_006.jpg"/>
+									</a>
+									<div class="sold_size" style="top:0">
+										<p class="sold_side_tit">可售尺码：</p>
+										<ul class="sold_side_list clearfix">
+											<li class="ssl_item">
+												<span>IT42</span>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="tit">
+									<span>Stella McCartney</span>
+									<a href="">女士花朵衬衫</a>
+								</li>
+								<li class="price">
+									<span class="showprice">1290</span>
+									<span class="delprice">4999</span>
+								</li>
+							</ol>
+						</li>
+						<li class="item">
+							<ol>
+								<li class="pic">
+									<a href="">
+										<img style="display:inline" src="../img/g1_234_312_006.jpg"/>
+									</a>
+									<div class="sold_size" style="top:0">
+										<p class="sold_side_tit">可售尺码：</p>
+										<ul class="sold_side_list clearfix">
+											<li class="ssl_item">
+												<span>IT42</span>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="tit">
+									<span>Stella McCartney</span>
+									<a href="">女士花朵衬衫</a>
+								</li>
+								<li class="price">
+									<span class="showprice">1290</span>
+									<span class="delprice">4999</span>
+								</li>
+							</ol>
+						</li>
+						<li class="item" style="margin-right:0;">
+							<ol>
+								<li class="pic">
+									<a href="">
+										<img style="display:inline" src="../img/g1_234_312_006.jpg"/>
+									</a>
+									<div class="sold_size" style="top:0">
+										<p class="sold_side_tit">可售尺码：</p>
+										<ul class="sold_side_list clearfix">
+											<li class="ssl_item">
+												<span>IT42</span>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="tit">
+									<span>Stella McCartney</span>
+									<a href="">女士花朵衬衫</a>
+								</li>
+								<li class="price">
+									<span class="showprice">1290</span>
+									<span class="delprice">4999</span>
+								</li>
+							</ol>
+						</li>
+						<li class="item">
+							<ol>
+								<li class="pic">
+									<a href="">
+										<img style="display:inline" src="../img/g1_234_312_006.jpg"/>
+									</a>
+									<div class="sold_size" style="top:0">
+										<p class="sold_side_tit">可售尺码：</p>
+										<ul class="sold_side_list clearfix">
+											<li class="ssl_item">
+												<span>IT42</span>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="tit">
+									<span>Stella McCartney</span>
+									<a href="">女士花朵衬衫</a>
+								</li>
+								<li class="price">
+									<span class="showprice">1290</span>
+									<span class="delprice">4999</span>
+								</li>
+							</ol>
+						</li>
+						<li class="item">
+							<ol>
+								<li class="pic">
+									<a href="">
+										<img style="display:inline" src="../img/g1_234_312_006.jpg"/>
+									</a>
+									<div class="sold_size" style="top:0">
+										<p class="sold_side_tit">可售尺码：</p>
+										<ul class="sold_side_list clearfix">
+											<li class="ssl_item">
+												<span>IT42</span>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="tit">
+									<span>Stella McCartney</span>
+									<a href="">女士花朵衬衫</a>
+								</li>
+								<li class="price">
+									<span class="showprice">1290</span>
+									<span class="delprice">4999</span>
+								</li>
+							</ol>
+						</li>
+						<li class="item">
+							<ol>
+								<li class="pic">
+									<a href="">
+										<img style="display:inline" src="../img/g1_234_312_006.jpg"/>
+									</a>
+									<div class="sold_size" style="top:0">
+										<p class="sold_side_tit">可售尺码：</p>
+										<ul class="sold_side_list clearfix">
+											<li class="ssl_item">
+												<span>IT42</span>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="tit">
+									<span>Stella McCartney</span>
+									<a href="">女士花朵衬衫</a>
+								</li>
+								<li class="price">
+									<span class="showprice">1290</span>
+									<span class="delprice">4999</span>
+								</li>
+							</ol>
+						</li>
+						<li class="item" style="margin-right:0;">
+							<ol>
+								<li class="pic">
+									<a href="">
+										<img style="display:inline" src="../img/g1_234_312_006.jpg"/>
+									</a>
+									<div class="sold_size" style="top:0">
+										<p class="sold_side_tit">可售尺码：</p>
+										<ul class="sold_side_list clearfix">
+											<li class="ssl_item">
+												<span>IT42</span>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="tit">
+									<span>Stella McCartney</span>
+									<a href="">女士花朵衬衫</a>
+								</li>
+								<li class="price">
+									<span class="showprice">1290</span>
+									<span class="delprice">4999</span>
+								</li>
+							</ol>
+						</li>
+						<li class="item">
+							<ol>
+								<li class="pic">
+									<a href="">
+										<img style="display:inline" src="../img/g1_234_312_006.jpg"/>
+									</a>
+									<div class="sold_size" style="top:0">
+										<p class="sold_side_tit">可售尺码：</p>
+										<ul class="sold_side_list clearfix">
+											<li class="ssl_item">
+												<span>IT42</span>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="tit">
+									<span>Stella McCartney</span>
+									<a href="">女士花朵衬衫</a>
+								</li>
+								<li class="price">
+									<span class="showprice">1290</span>
+									<span class="delprice">4999</span>
+								</li>
+							</ol>
+						</li>
+						<li class="item">
+							<ol>
+								<li class="pic">
+									<a href="">
+										<img style="display:inline" src="../img/g1_234_312_006.jpg"/>
+									</a>
+									<div class="sold_size" style="top:0">
+										<p class="sold_side_tit">可售尺码：</p>
+										<ul class="sold_side_list clearfix">
+											<li class="ssl_item">
+												<span>IT42</span>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="tit">
+									<span>Stella McCartney</span>
+									<a href="">女士花朵衬衫</a>
+								</li>
+								<li class="price">
+									<span class="showprice">1290</span>
+									<span class="delprice">4999</span>
+								</li>
+							</ol>
+						</li>
+						<li class="item">
+							<ol>
+								<li class="pic">
+									<a href="">
+										<img style="display:inline" src="../img/g1_234_312_006.jpg"/>
+									</a>
+									<div class="sold_size" style="top:0">
+										<p class="sold_side_tit">可售尺码：</p>
+										<ul class="sold_side_list clearfix">
+											<li class="ssl_item">
+												<span>IT42</span>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="tit">
+									<span>Stella McCartney</span>
+									<a href="">女士花朵衬衫</a>
+								</li>
+								<li class="price">
+									<span class="showprice">1290</span>
+									<span class="delprice">4999</span>
+								</li>
+							</ol>
+						</li>
+						<li class="item" style="margin-right:0;">
+							<ol>
+								<li class="pic">
+									<a href="">
+										<img style="display:inline" src="../img/g1_234_312_006.jpg"/>
+									</a>
+									<div class="sold_size" style="top:0">
+										<p class="sold_side_tit">可售尺码：</p>
+										<ul class="sold_side_list clearfix">
+											<li class="ssl_item">
+												<span>IT42</span>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="tit">
+									<span>Stella McCartney</span>
+									<a href="">女士花朵衬衫</a>
+								</li>
+								<li class="price">
+									<span class="showprice">1290</span>
+									<span class="delprice">4999</span>
+								</li>
+							</ol>
+						</li>
+						<li class="item">
+							<ol>
+								<li class="pic">
+									<a href="">
+										<img style="display:inline" src="../img/g1_234_312_006.jpg"/>
+									</a>
+									<div class="sold_size" style="top:0">
+										<p class="sold_side_tit">可售尺码：</p>
+										<ul class="sold_side_list clearfix">
+											<li class="ssl_item">
+												<span>IT42</span>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="tit">
+									<span>Stella McCartney</span>
+									<a href="">女士花朵衬衫</a>
+								</li>
+								<li class="price">
+									<span class="showprice">1290</span>
+									<span class="delprice">4999</span>
+								</li>
+							</ol>
+						</li>
+						<li class="item">
+							<ol>
+								<li class="pic">
+									<a href="">
+										<img style="display:inline" src="../img/g1_234_312_006.jpg"/>
+									</a>
+									<div class="sold_size" style="top:0">
+										<p class="sold_side_tit">可售尺码：</p>
+										<ul class="sold_side_list clearfix">
+											<li class="ssl_item">
+												<span>IT42</span>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="tit">
+									<span>Stella McCartney</span>
+									<a href="">女士花朵衬衫</a>
+								</li>
+								<li class="price">
+									<span class="showprice">1290</span>
+									<span class="delprice">4999</span>
+								</li>
+							</ol>
+						</li>
+						<li class="item">
+							<ol>
+								<li class="pic">
+									<a href="">
+										<img style="display:inline" src="../img/g1_234_312_006.jpg"/>
+									</a>
+									<div class="sold_size" style="top:0">
+										<p class="sold_side_tit">可售尺码：</p>
+										<ul class="sold_side_list clearfix">
+											<li class="ssl_item">
+												<span>IT42</span>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="tit">
+									<span>Stella McCartney</span>
+									<a href="">女士花朵衬衫</a>
+								</li>
+								<li class="price">
+									<span class="showprice">1290</span>
+									<span class="delprice">4999</span>
+								</li>
+							</ol>
+						</li>
+						<li class="item" style="margin-right:0;">
+							<ol>
+								<li class="pic">
+									<a href="">
+										<img style="display:inline" src="../img/g1_234_312_006.jpg"/>
+									</a>
+									<div class="sold_size" style="top:0">
+										<p class="sold_side_tit">可售尺码：</p>
+										<ul class="sold_side_list clearfix">
+											<li class="ssl_item">
+												<span>IT42</span>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="tit">
+									<span>Stella McCartney</span>
+									<a href="">女士花朵衬衫</a>
+								</li>
+								<li class="price">
+									<span class="showprice">1290</span>
+									<span class="delprice">4999</span>
+								</li>
+							</ol>
+						</li>
+						<li class="item">
+							<ol>
+								<li class="pic">
+									<a href="">
+										<img style="display:inline" src="../img/g1_234_312_006.jpg"/>
+									</a>
+									<div class="sold_size" style="top:0">
+										<p class="sold_side_tit">可售尺码：</p>
+										<ul class="sold_side_list clearfix">
+											<li class="ssl_item">
+												<span>IT42</span>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="tit">
+									<span>Stella McCartney</span>
+									<a href="">女士花朵衬衫</a>
+								</li>
+								<li class="price">
+									<span class="showprice">1290</span>
+									<span class="delprice">4999</span>
+								</li>
+							</ol>
+						</li>
+						<li class="item">
+							<ol>
+								<li class="pic">
+									<a href="">
+										<img style="display:inline" src="../img/g1_234_312_006.jpg"/>
+									</a>
+									<div class="sold_size" style="top:0">
+										<p class="sold_side_tit">可售尺码：</p>
+										<ul class="sold_side_list clearfix">
+											<li class="ssl_item">
+												<span>IT42</span>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="tit">
+									<span>Stella McCartney</span>
+									<a href="">女士花朵衬衫</a>
+								</li>
+								<li class="price">
+									<span class="showprice">1290</span>
+									<span class="delprice">4999</span>
+								</li>
+							</ol>
+						</li>
+						<li class="item">
+							<ol>
+								<li class="pic">
+									<a href="">
+										<img style="display:inline" src="../img/g1_234_312_006.jpg"/>
+									</a>
+									<div class="sold_size" style="top:0">
+										<p class="sold_side_tit">可售尺码：</p>
+										<ul class="sold_side_list clearfix">
+											<li class="ssl_item">
+												<span>IT42</span>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="tit">
+									<span>Stella McCartney</span>
+									<a href="">女士花朵衬衫</a>
+								</li>
+								<li class="price">
+									<span class="showprice">1290</span>
+									<span class="delprice">4999</span>
+								</li>
+							</ol>
+						</li>
+						<li class="item" style="margin-right:0;">
+							<ol>
+								<li class="pic">
+									<a href="">
+										<img style="display:inline" src="../img/g1_234_312_006.jpg"/>
+									</a>
+									<div class="sold_size" style="top:0">
+										<p class="sold_side_tit">可售尺码：</p>
+										<ul class="sold_side_list clearfix">
+											<li class="ssl_item">
+												<span>IT42</span>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="tit">
+									<span>Stella McCartney</span>
+									<a href="">女士花朵衬衫</a>
+								</li>
+								<li class="price">
+									<span class="showprice">1290</span>
+									<span class="delprice">4999</span>
+								</li>
+							</ol>
+						</li>
+					</ul>
+				</div>
+				<div id="bottomPageBox" class="xs-pagebar clearfix">
+					<div class="Pagecon">
+						<div class="Pagenum">
+							<a href="">首页</a>
+							<a href="" class="pre-page " >上一页</a>
+							<span class="curpage">1</span>
+							<a href="">2</a>
+							<a href="">3</a>
+							<a href="">4</a>
+							<a href="">5</a>
+							<a href="">6</a>
+							<a href="">7</a>
+							<a href="">8</a>
+							<a href="">9</a>
+							<a href="">10</a>
+							<a href=""class="next-page">下一页</a>
+							<a href="" >尾页</a>
+						</div>
+						<div class="Pageopt">
+							<div class="totalnum">
+								共
+								<span>16</span>
+								页
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="xs-btm-search">
+		<form action="" id="j_searchFromBottom">
+			<div class="searchbox">
+				<div class="inputbg">
+					<input class="txt-input leon-autosug_input" value="Stella McCartney "/>
+					
+				</div>
+				<button class="sbtn" type="submit"></button>
+			</div>
+		</form>
+	</div>
+	<div id="banner_BrowsingHistory" class="tj_box">
+		<div class="hd">
+			<p class="tit">猜你喜欢<span>Recommend</span></p>
+		</div>
+		<div class="xs-salexiurecom-bottombox xs-xiurecombox">
+			<div class="bd clearfix" style="overflow:hidden;">
+				<ul id="move-list" style="width:9999px">
+					<li class="cloned">
+						<p class="picbox">
+							<a href="">
+								<img src="../img/g1_180_240_009.jpg"/>
+							</a>
+						</p>
+						<p class="tit">Michael Kors</p>
+						<p class="tit">
+							<a href="">Sutton系列 中号黑色十字纹</a>
+						</p>
+						<p class="price xs-ico">2100</p>
+					</li>
+					<li class="cloned">
+						<p class="picbox">
+							<a href="">
+								<img src="../img/g1_180_240_004.jpg"/>
+							</a>
+						</p>
+						<p class="tit">Michael Kors</p>
+						<p class="tit">
+							<a href="">Hamilton系列 中号棕色logo</a>
+						</p>
+						<p class="price xs-ico">1750</p>
+					</li>
+					<li class="cloned">
+						<p class="picbox">
+							<a href="">
+								<img src="../img/g1_180_240.jpg"/>
+							</a>
+						</p>
+						<p class="tit">Michael Kors</p>
+						<p class="tit">
+							<a href="">Cynthia系列 大号黑色十字纹</a>
+						</p>
+						<p class="price xs-ico">1950</p>
+					</li>
+					<li class="cloned">
+						<p class="picbox">
+							<a href="">
+								<img src="../img/g1_180_240_005.jpg"/>
+							</a>
+						</p>
+						<p class="tit">Michael Kors</p>
+						<p class="tit">
+							<a href="">selma系列 大号黑色十字纹</a>
+						</p>
+						<p class="price xs-ico">2100</p>
+					</li>
+					<li class="cloned">
+						<p class="picbox">
+							<a href="">
+								<img src="../img/g1_180_240_010.jpg"/>
+							</a>
+						</p>
+						<p class="tit">Heine</p>
+						<p class="tit">
+							<a href="">女式棉质紧身裤</a>
+						</p>
+						<p class="price xs-ico">1950</p>
+					</li>
+					<li class="cloned">
+						<p class="picbox">
+							<a href="">
+								<img src="../img/g1_180_240_008.jpg"/>
+							</a>
+						</p>
+						<p class="tit">Mathavis</p>
+						<p class="tit">
+							<a href="">女士浅蓝色时尚名族风...</a>
+						</p>
+						<p class="price xs-ico">399</p>
+					</li>
+					<li class="cloned">
+						<p class="picbox">
+							<a href="">
+								<img src="../img/g1_180_240_002.jpg"/>
+							</a>
+						</p>
+						<p class="tit">Burberry</p>
+						<p class="tit">
+							<a href="">女士纯棉衣衫</a>
+						</p>
+						<p class="price xs-ico">2350</p>
+					</li>
+					<li class="cloned">
+						<p class="picbox">
+							<a href="">
+								<img src="../img/g1_180_240_011.jpg"/>
+							</a>
+						</p>
+						<p class="tit">Heine</p>
+						<p class="tit">
+							<a href="">女士螺纹针织背心</a>
+						</p>
+						<p class="price xs-ico">119</p>
+					</li>
+					<li class="cloned">
+						<p class="picbox">
+							<a href="">
+								<img src="../img/g1_180_240_007.jpg"/>
+							</a>
+						</p>
+						<p class="tit">Gucci</p>
+						<p class="tit">
+							<a href="">女士字符不定性中号手提包</a>
+						</p>
+						<p class="price xs-ico">10740</p>
+					</li>
+					<li class="cloned">
+						<p class="picbox">
+							<a href="">
+								<img src="../img/g1_180_240_003.jpg"/>
+							</a>
+						</p>
+						<p class="tit">Gucci</p>
+						<p class="tit">
+							<a href="">女士字符手提包</a>
+						</p>
+						<p class="price xs-ico">9690</p>
+					</li>
+					<li class="cloned">
+						<p class="picbox">
+							<a href="">
+								<img src="../img/g1_180_240_009.jpg"/>
+							</a>
+						</p>
+						<p class="tit">Michael Kors</p>
+						<p class="tit">
+							<a href="">Sutton系列 中号黑色十字纹</a>
+						</p>
+						<p class="price xs-ico">2100</p>
+					</li>
+					<li class="cloned">
+						<p class="picbox">
+							<a href="">
+								<img src="../img/g1_180_240_004.jpg"/>
+							</a>
+						</p>
+						<p class="tit">Michael Kors</p>
+						<p class="tit">
+							<a href="">Hamilton系列 中号棕色logo</a>
+						</p>
+						<p class="price xs-ico">1750</p>
+					</li>
+					<li class="cloned">
+						<p class="picbox">
+							<a href="">
+								<img src="../img/g1_180_240.jpg"/>
+							</a>
+						</p>
+						<p class="tit">Michael Kors</p>
+						<p class="tit">
+							<a href="">Cynthia系列 大号黑色十字纹</a>
+						</p>
+						<p class="price xs-ico">1950</p>
+					</li>
+					<li class="cloned">
+						<p class="picbox">
+							<a href="">
+								<img src="../img/g1_180_240_005.jpg"/>
+							</a>
+						</p>
+						<p class="tit">Michael Kors</p>
+						<p class="tit">
+							<a href="">selma系列 大号黑色十字纹</a>
+						</p>
+						<p class="price xs-ico">2100</p>
+					</li>
+					<li class="cloned">
+						<p class="picbox">
+							<a href="">
+								<img src="../img/g1_180_240_010.jpg"/>
+							</a>
+						</p>
+						<p class="tit">Heine</p>
+						<p class="tit">
+							<a href="">女式棉质紧身裤</a>
+						</p>
+						<p class="price xs-ico">1950</p>
+					</li>
+					<li class="cloned">
+						<p class="picbox">
+							<a href="">
+								<img src="../img/g1_180_240_008.jpg"/>
+							</a>
+						</p>
+						<p class="tit">Mathavis</p>
+						<p class="tit">
+							<a href="">女士浅蓝色时尚名族风...</a>
+						</p>
+						<p class="price xs-ico">399</p>
+					</li>
+					<li class="cloned">
+						<p class="picbox">
+							<a href="">
+								<img src="../img/g1_180_240_002.jpg"/>
+							</a>
+						</p>
+						<p class="tit">Burberry</p>
+						<p class="tit">
+							<a href="">女士纯棉衣衫</a>
+						</p>
+						<p class="price xs-ico">2350</p>
+					</li>
+					<li class="cloned">
+						<p class="picbox">
+							<a href="">
+								<img src="../img/g1_180_240_011.jpg"/>
+							</a>
+						</p>
+						<p class="tit">Heine</p>
+						<p class="tit">
+							<a href="">女士螺纹针织背心</a>
+						</p>
+						<p class="price xs-ico">119</p>
+					</li>
+					<li class="cloned">
+						<p class="picbox">
+							<a href="">
+								<img src="../img/g1_180_240_007.jpg"/>
+							</a>
+						</p>
+						<p class="tit">Gucci</p>
+						<p class="tit">
+							<a href="">女士字符不定性中号手提包</a>
+						</p>
+						<p class="price xs-ico">10740</p>
+					</li>
+					<li class="cloned">
+						<p class="picbox">
+							<a href="">
+								<img src="../img/g1_180_240_003.jpg"/>
+							</a>
+						</p>
+						<p class="tit">Gucci</p>
+						<p class="tit">
+							<a href="">女士字符手提包</a>
+						</p>
+						<p class="price xs-ico">9690</p>
+					</li>
+				</ul>
+			</div>
+			<p class="arrow back"></p>
+			<p class="arrow forward"></p>
+		</div>
+	</div>
+	<div id="backtop">
+		<span class="closed">关闭</span>
+		<div class="r_menu">
+			<a href="" class="service"></a>
+			<a href="" id="right_new_bag" class="buy">
+				<span id="num" class="redx shopNum num">0</span>
+			</a>
+			<a href="" class="mail"></a>
+			<a href="javascript:;" class="backtop"></a>
+		</div>
+	</div>
 		<!--尾部-->
 	<div class="footer_wrap">
 		<div class="footer">
@@ -1368,6 +2582,5 @@
 			
 		</div>
 		
-	
 </body>
 </html>

@@ -179,7 +179,7 @@ a{
 	width:24px;
 	height:26px;
 	float:right;
-	background:url(img/sousuo.jpg);
+	background:url(../img/sousuo.jpg);
 	cursor: pointer;
 }
 .header_bottom{
@@ -314,7 +314,7 @@ a{
 	border:1px solid #d7d7d7;
 	padding-left:15px;
 	padding-top:11px;
-	z-index: 998
+	
 	background:#fff;
 }
 .li_hide2{

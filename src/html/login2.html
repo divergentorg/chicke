@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href = "../css/login.css"/>
+	<script type="text/javascript" src="../js/jquery-1.12.0.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#mobile').on("focus",function(){
+			  var _text = $(this).val();
+			  if(_text=="手机号/邮箱/用户名"){
+			  	$(this).val("");
+			  }			  	
+			})
+			$('#mobile').on("blur",function(){
+			  var _text = $(this).val();
+			  var reg = /^1\d{10}$/
+			  var reg1 = /^[a-zA-Z][a-zA-Z0-9]{5,19}$/	
+			  var filter  = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+			  if(_text!=""){
+			  	if(!reg.test(_text)){
+			  		if(!reg1.test(_text)){
+			  			if(!filter.test(_text)){
+			  				$('#errorMsgText').html('请输入正确手机号码,邮箱或用户名')
+			  			}else{
+			  				$('#errorMsgText').html('')
+			  			}
+			  		}else{
+			  			$('#errorMsgText').html('')
+			  		}
+			  		
+			  	}else{
+			  		$('#errorMsgText').html('')
+			  	}
+			  }else{
+			  	$(this).val("手机号/邮箱/用户名");
+			  	$('#errorMsgText').html('请输入正确手机号码,邮箱或用户名')
+			  }		  	
+			})
+			
+			$('#autologin').on('click',function(){
+			  $(this).parent().toggleClass("checked");
+			 }) 
+			$('#api_login_opt').click(function(){
+				$('.api_login_box').slideToggle();
+			})
+		})
+	</script>
+</head>
+<body>
+	<div class="head">
+		<div class="layout_head">
+			<h1 class="logo_box">
+				<a href="" class="logo">
+					<img src="../img/logo_mini.png"/>
+				</a>
+			</h1>
+		</div>
+	</div>
+	<div id="page" class="login_page">
+		<div id="login_bg" class="login_bgcolor">
+			<div id="login_eme" class="login_theme" style="background: rgb(247, 242, 236) url(../img/login.jpg) no-repeat scroll center center;"></div>
+			<div class="login_box">
+				<form>
+					<div id="login_pan" class="login_panel">
+						<ul class="login_tap">
+							<li>
+								<a href="">短信登陆</a>
+							</li>
+							<li>
+								<a href="" class="active">密码登陆</a>
+							</li>
+						</ul>
+						<div class="login_form">
+							<ul>
+								<li class="errorMsgBox" class="err_mag">
+									<label class="login_err_msg">
+										<b></b>
+										<span id="errorMsgText"></span>
+									</label>
+								</li>
+								<li class="username">
+									<input type="text" id="mobile" class="ltext shadow-input" name="phoneNum" maxlength="11" value="手机号/邮箱/用户名"/>
+								</li>
+								
+								<li class="password">
+									<input type="password" id="password" class="ltext shadow-input" name="paddWord" value=""/>				
+								</li>
+								<li class="check_opt">
+									<label id="autologin_lab" class="autologinb checked" for="autologin">
+										<div class="smpic"></div>
+										<input type="checkbox" id="autologin" checked="true" class="lcheck"/>两周内自动登录
+										<input id="autologin_value" name="isAutologin" value="true" type="hidden"/>
+									</label>
+									<div class="getpassreg">
+										<a href="" class="getpass">找回密码</a>
+										|
+										<a href="" class="getpass">注册账户</a>									
+									</div>
+								</li>
+								<li class="clfix">
+									<button class="login_btn" id="login_Btn" type="submit">登       录</button>
+								</li>	
+							</ul>
+						</div>
+						<div class="login_extinfo">
+							<dt id="api_login_opt" class='optbar'>
+								<span class="tit">合作网站帐号登录</span>
+							</dt>
+							<dd class="api_login_box" style="display:block">
+								<ul class="api_login clfix">
+									<li><a href="" class="api_qq" title="QQ帐号"></a></li>
+									<li><a href="" class="api_wechat" title="微信帐号"></a></li>
+									<li><a href="" class="api_sina" title="新浪帐号"></a></li>
+									<li><a href="" class="api_alipay" title="支付宝帐号"></a></li>
+									<li class="last"><a href="" class="api_pingan" title="平安万里通"></a></li>
+								</ul>
+							</dd>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="footer_1 g_footer" >
+		<div class="g_footer_xiu">
+			<a href="">关于走秀</a><b>|</b>
+			<a href="">媒体报道</a><b>|</b>
+			<a href="">品牌招商</a><b>|</b>
+			<a href="">加入走秀</a><b>|</b>
+			<a href="">友情链接</a><b>|</b>
+			<a href="">联系我们</a><b>|</b>
+			<a href="">网站地图</a>
+		</div>
+		<div class="g_footer_copywrite">
+			Copywrite &copy; 2008-2016
+			<a href="">Xiu.com</a>
+			版权所有 . 粤ICP备07502993号
+		</div>
+	</div>
+</body>
+</html>
