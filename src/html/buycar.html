@@ -5,6 +5,27 @@
 	<title>Document</title>
 	<link rel="stylesheet" type="text/css" href = "../css/buycar.css"/>
 	<script type="text/javascript" src="../js/jquery-1.12.0.js"></script>
+	<script>
+		$(function(){
+			$('.cartbar_opa').find('a').on('mouseenter',function(){
+				$(this).css({
+					background:"#f60",
+					color:'#fff'
+				})
+			})
+			$('.cartbar_opa').find('a').on('mouseleave',function(){
+				$(this).css({
+					background:"#fff",
+					color:'#000'
+				})
+			})
+			$('#goodsChecks').click(function(e){
+				var checkedbox = $('.wartab_div').find('input')
+				var checked = $(this).prop('checked');
+				checkedbox.prop('checked',checked);
+			})
+		})
+	</script>		
 </head>
 <body>
 	<div class="s_header rela s_shoppingLine" style="background-img:none;">
@@ -24,7 +45,7 @@
 			<p>
 				<span id="loginZone">
 					欢迎光临走秀网！xiu_1013477434195
-					<a href="">[退出]</a>
+					<a href="../index.html">[退出]</a>
 					<a href="">[我的走秀]</a>
 				</span>
 				|
@@ -50,27 +71,199 @@
 			</ul>
 		</div>
 	</div>
-	<div class="wares_div">
-		<div id="shoppingCart">
-			<div class="wartab_div">
-				<table id="" class="war_tab1">
-					<tr>
-						<th style="color:black;background-color:#e3e3e3;width:80px;">
+	<div class="wares_div" style="width:950px;height:642px;">
+		<div id="shoppingCart" style="width:950px;height:201px;">
+			<div class="wartab_div" style="width:950px;height:201px">
+				<div id="" class="war_tab1"style="width:950px;height:144px">
+					<div style="width:950px;height:32px;">
+						<div style="color:black;background-color:#e3e3e3;width:63px;float:left;height:32px;line-height:32px">
 							<label style="padding:0 0 0 10px;">
 								<input id="goodsChecks" type="checkbox" class="checkall" checked="checked">
 								全选
 							</label>
-						</th>
-						<th class="thcol" style="color:black;background-color:#e3e3e3;" colspan="2">商品</th>
-						<th style="color:black;background-color:#e3e3e3;width:120px;text-align:center;">购买价(元)</th>
-						<th style="color:black;background-color:#e3e3e3;" >小计(元)</th>
-						<th style="color:black;background-color:#e3e3e3;" >数量</th>
-						<th style="color:black;background-color:#e3e3e3;">操作</th>
-					</tr>
-					<tr></tr>
-				</table>
+						</div>
+						<div class="thcol" style="color:black;background-color:#e3e3e3;float:left;width:377px;height:32px;line-height:32px;text-align:center;" >商品</div>
+						<div style="color:black;background-color:#e3e3e3;width:120px;text-align:center;float:left;height:32px;line-height:32px">购买价(元)</div>
+						<div style="color:black;background-color:#e3e3e3;width:130px;float:left;height:32px;line-height:32px" >
+							<div class="xp_price" style="text-align:center;">小计(元)</div>
+						</div>
+						<div style="color:black;background-color:#e3e3e3;width:130px;float:left;line-height:32px" >
+							<div class="quantity_div" style="text-align:center;">数量</div>
+						</div>
+						<div style="color:black;background-color:#e3e3e3;width:130px;float:left;line-height:32px">
+							<div class="op_div" style="text-align:center;">操作</div>
+						</div>
+					</div>
+					<div class="goodsitemb item_checked" style="height:111px;">
+						<div class="chebox" style="float:left;">
+							<input class="goodschek" type="checkbox" style="margin-top:35px" checked="checked"/>
+						</div>
+						<div class="tx_img" style="float:left;">
+							<a href="">
+								<img src="../img/g1_66_88.jpg" alt="" style="border:1px solid #dfdfdf;height:80px;width:60px;">
+							</a>
+						</div>
+						<div class="txt1" valign="top" style="float:left;">
+							<div class="" style="width:100%;height:71px">
+								<p >Lancome</p>
+								<p style="height:21px;float:left;">
+									<a href="" class="wer_span wer_span_a"style="float:left;">化妆柔肤嫩肤水 Tc柔肤粉水400ml			
+									</a>
+									<span class="no_youhui"style="float:left;height:18px;line-height:18px;background: #ed1b23;color:#fff;">不可用优惠券</span>
+								</p>
+								<div class="" style="width:307px;height:25px;float:left;">
+									<p>颜色 : 400ml 尺码 : 均码</p>
+								</div>
+							</div>
+						</div>
+						<div class="pricetd" style="float:left;">
+							<p>￥ 355</p>
+						</div>
+						<div style="width:110px;height:91px;padding:10px;text-align:center;color:red;float:left;line-height:91px">￥ 355</div>
+						<div style="width:110px;height:91px;padding:10px;text-align:center;float:left;line-height:91px">
+							<a href="" class="at">-</a>
+							<input type="text" value="1" class="war_txt"/>
+							<span class="at">
+								<small>+</small>
+							</span>
+						</div>
+						<div class="d1" style="width:110px;height:91px;padding:10px;text-align:center;float:left;line-height:91px">
+							<span style="margin-top:25px;margin-left:25px">
+								<a href="">移至收藏夹</a>
+							</span>
+							<b></b>
+							<span style="margin-top:15px;margin-left:28px">
+								<a href="">删除</a>
+							</span>
+						</div>
+					</div>
+					
+			
+			
+		</div>
+		<div id="" class="cartbar">
+			<div class="carbar_cheall">
+				<label>
+					<input class="checkall" checked="checked" type="checkbox" style="margin-right:5px;"/>全选
+				</label>
+			</div>	
+			<div class="cartbar_opa">
+				<a href="" class="delbtn">删除</a>
+				<a href="" class="delbtn">清除失效商品</a>
+				<a href="" class="delbtn">移至收藏夹</a>
+			</div>
+			<div class="cartbar_chego">
+				已选商品
+				<b id="checkCountNum">1</b>
+				件
+			</div>
+			<div class="cartbar_totall">
+				总计(
+				<span>不含运费</span>
+				):
+				<span class="cartbar_total_spn">
+					<span>
+						￥
+						<span>355</span>
+					</span>
+				</span>
+			</div>	
+				<input type="button" id="toBalanceLink" class="cartbar_pay cartbar_payok">
+		</div>		
+		
+		</div>
+		</div>
+		<div class="elements_list">
+			<div id="banner_ShoppingCart" class=" bfd bfd_mainWidth">
+				<h2 class="bfd_title">你可能感兴趣的商品</h2>
+				<ul>
+					<li>
+						<a href="" class="bfd_img">
+							<img src="../img/g1_180_240_002 (2).jpg" alt="">
+						</a>
+						<p class="name_wp">欧树</p>
+						<p class="name_wp">
+							<a href="" class="bfd_name">神奇补水抗老眼霜 15ml 去细纹紧致</a>
+						</p>
+						<div class="bfd_price">
+							走秀价:
+							<span>￥139</span>
+						</div>
+					</li>
+					<li>
+						<a href="" class="bfd_img">
+							<img src="../img/g1_180_240_002 (2).jpg" alt="">
+						</a>
+						<p class="name_wp">欧树</p>
+						<p class="name_wp">
+							<a href="" class="bfd_name">神奇补水抗老眼霜 15ml 去细纹紧致</a>
+						</p>
+						<div class="bfd_price">
+							走秀价:
+							<span>￥139</span>
+						</div>
+					</li>
+					<li>
+						<a href="" class="bfd_img">
+							<img src="../img/g1_180_240_002 (2).jpg" alt="">
+						</a>
+						<p class="name_wp">欧树</p>
+						<p class="name_wp">
+							<a href="" class="bfd_name">神奇补水抗老眼霜 15ml 去细纹紧致</a>
+						</p>
+						<div class="bfd_price">
+							走秀价:
+							<span>￥139</span>
+						</div>
+					</li>
+					<li>
+						<a href="" class="bfd_img">
+							<img src="../img/g1_180_240_002 (2).jpg" alt="">
+						</a>
+						<p class="name_wp">欧树</p>
+						<p class="name_wp">
+							<a href="" class="bfd_name">神奇补水抗老眼霜 15ml 去细纹紧致</a>
+						</p>
+						<div class="bfd_price">
+							走秀价:
+							<span>￥139</span>
+						</div>
+					</li>
+					<li>
+						<a href="" class="bfd_img">
+							<img src="../img/g1_180_240_002 (2).jpg" alt="">
+						</a>
+						<p class="name_wp">欧树</p>
+						<p class="name_wp">
+							<a href="" class="bfd_name">神奇补水抗老眼霜 15ml 去细纹紧致</a>
+						</p>
+						<div class="bfd_price">
+							走秀价:
+							<span>￥139</span>
+						</div>
+					</li>
+				</ul>
 			</div>
 		</div>
+		<div class="interestItems">
+			<div class="set_far">
+				<h2 style="float:left;">
+					<a href="" id="shoeModel" class="on out" style="outline:none;">
+						看看您收藏的商品
+						<b></b>
+					</a>
+				</h2>
+				<h2 style="float: left;margin-left: 70px;padding-top: 5px;">你暂无收藏商品</h2>
+			</div>
+		</div>			
+	</div>
+	<div class="M_shopping">
+		<p>
+			Copywrite &copy; 2008-2016
+			<a href="">Xiu.com</a>
+			深圳走秀网络科技有限公司 版权所有 . 
+			<a href="">粤ICP备07502993号</a>
+		</p>
 	</div>
 </body>
 </html>

@@ -98,20 +98,7 @@
 					color:'#fff'
 				})
 			})
-			$(window).scroll(function(){
-				var $gdl = $(this).scrollTop()
-				if($gdl>156){
-					$('.header_hide').css({
-						display:'block'
-					});
-					$('.nav_wrap').addClass('fixed-top2')
-				}else if($gdl<156){
-					$('.header_hide').css({
-						display:'none'
-					});
-					$('.nav_wrap').removeClass('fixed-top2')
-				}
-			})
+			
 			$('.li_left_1').find('h4').on('mouseenter',function(){
 				$(this).children('a').css({
 					color:'orange'
@@ -156,12 +143,98 @@
 					background:'#f7f7f7'
 				})
 			})
-			$('.imgDiv').on('mousemove',function(e){
-				$('#showing').css({
-					top:(100+e.offsetY)+'px',
-					left:(100+e.offsetX)+'px'
+			var pic = $('#showing');
+			var dw = pic.outerWidth();
+			var dh= pic.outerHeight();
+			var imgDiv = $('.imgDiv');
+			var bigPicDiv = $('#bigPic');
+			var bpd = $('.bpd');
+			console.log(0)
+				console.log(bigPicDiv.outerWidth(),imgDiv.outerWidth())
+				bigPicDiv.load(function(){
+					console.log('big:',bigPicDiv.outerWidth())
+				})
+			imgDiv.mousemove(function(e){
+				pic.css('display','block')
+				bpd.css('display','block')
+				var fold = bigPicDiv.outerWidth()/imgDiv.outerWidth();
+				var fold1 = bigPicDiv.outerHeight()/imgDiv.outerHeight();
+				var disX = e.pageX-imgDiv.offset().left-dw/2
+				var disY = e.pageY-imgDiv.offset().top-dh/2
+				if(disX<=0){
+					disX=0
+				}else if(disX>=imgDiv.outerWidth()-dw){
+					disX=imgDiv.outerWidth()-dw
+				}
+				if(disY<=0){
+					disY=0
+				}else if(disY>=imgDiv.outerHeight()-dh){
+					disY=imgDiv.outerHeight()-dh
+				}
+				pic.css({
+					left:disX,
+					top:disY
+				})
+				bigPicDiv.css({
+					left:-disX*fold,
+					top:-disY*fold1
 				})
 			})
+			imgDiv.mouseleave(function(){
+				pic.css('display','none')
+				bpd.css('display','none')
+			})
+			$('#smallPic').find('dd').on('mouseenter',function(){
+				$('#smallPic').find('dd').removeClass('dc')
+				$(this).addClass('dc')
+				var val = $(this).attr('name')
+				console.log(val)
+				$('#imgPic').attr("src","../img/g"+val+"_402_536.jpg")
+				bigPicDiv.attr("src","../img/g"+val+"_900_1200.jpg")
+			})
+			$('.layer13').find('a').on('mouseenter',function(){
+				$(this).find('i').css({
+					display:'block'
+				})
+			})
+			$('.layer13').find('a').on('mouseleave',function(){
+				$(this).find('i').css({
+					display:'none'
+				})
+			})
+			$('.seedet').on('mouseenter',function(){
+				$(this).find('em').css({
+					display:'block'
+				})
+			})
+			$('.seedet').on('mouseleave',function(){
+				$(this).find('em').css({
+					display:'none'
+				})
+			})
+			$('.fqfh').on('mouseenter',function(){
+				$(this).find('em').css({
+					display:'block'
+				})
+			})
+			$('.fqfh').on('mouseleave',function(){
+				$(this).find('em').css({
+					display:'none'
+				})
+			})
+			$('.closed').click(function(){
+				$('#backtop').css({
+					display:'none'
+				})
+			})
+			$('.backtop').click(function(){
+				$('body,html').animate({
+					scrollTop:'0'
+				},'slow')
+					
+				
+			})
+			
 		})
 	</script>
 </head>
@@ -173,9 +246,9 @@
 					<div class="header_main1">
 						<div class="header_left">
 							<ul class="headerlist">
-								<li id="loginDiv"><a href="" title="登录/注册">登录/注册</a></li>
+								<li id="loginDiv"><a href="login.html" title="登录/注册">登录/注册</a></li>
 								<li id="bag" class="my_bag relax">
-									<a id="new_bag" href="">购物袋<span id='num' class="indx">0</span>件</a>
+									<a id="new_bag" href="buycar.html">购物袋<span id='num' class="indx">0</span>件</a>
 									<div id="my_bag" class="my_Bag" style="display:none;">
 										<div style="padding-top:0;padding-left:8px;padding-bottom:8px;">
 											<span>购物袋暂时没有商品！</span>
@@ -1284,15 +1357,360 @@
 					<div class="big_map">
 						<div class="imgDiv" style="position:relative;display:inline-block;textDecoration:none;outline:0pt none;width:402px;height: 536px;text-decoration:none;">
 							<img id="imgPic" src="../img/g1_402_536.jpg"/>
-							<div id="showing" class="XMag" style="cursor:move;z-index:101;position:absolute;overflow:hidden;width:200px;height:200px;opacity:0.5;top:0;left:0;display:block;backgroundcolor:red;"></div>
-							<img id="imgPicMask" src="../img/g1_402_536.jpg" style="position: absolute;top: 0px;left: 0px;display: none;z-index: 1;"/>
-							<div id="bigPicDiv" class="bpd" style="overflow: hidden;z-index: 100;top: 0px;position: absolute;width: 402px;height: 536px;opacity: 1;left: 415px;display: block;">
-							<img id="bigPic" src="../img/g1_900_1200.jpg" style="padding: 0px;margin: 0px;border: 0px none;position: relative;"/>
+							<div id="showing" class="XMag" style="cursor:move;z-index:101;position:absolute;overflow:hidden;width:200px;height:200px;opacity:0.5;top:0;left:0;display:none;backgroundcolor:red;"></div>
+							
+							<div id="bigPicDiv" class="bpd" style="overflow: hidden;z-index: 100;top: 0px;position: absolute;width: 402px;height: 536px;opacity: 1;left: 415px;display: none;">
+								<img id="bigPic" src="../img/g1_900_1200.jpg" style="padding: 0px;margin: 0px;border: 0px none;position: relative;"/>
 							</div>							
+						</div>
+					</div>
+					<div class="sm_map">
+						<dl id="smallPic">
+							<dd class="dc" name="1">
+								<a href="">
+									<img src="../img/g1_66_88.jpg" alt=""/>
+								</a>
+							</dd>
+							<dd class="" name="2">
+								<a href="">
+									<img src="../img/g2_66_88.jpg" alt=""/>
+								</a>
+							</dd>
+							<dd class="" name="3">
+								<a href="">
+									<img src="../img/g3_66_88.jpg" alt=""/>
+								</a>
+							</dd>
+							<dd class="" name="4">
+								<a href="">
+									<img src="../img/g4_66_88.jpg" alt=""/>
+								</a>
+							</dd>
+							<dd class="" name="5">
+								<a href="">
+									<img src="../img/g5_66_88.jpg" alt=""/>
+								</a>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				<div style="width:570px;float:right;position:relative;z-index:0;">
+					<div id="goodsInfoBox" class="p_jx">
+						<div class="p_title">
+							<span>
+								<h1 style="font-size:14px;">
+									<font style="color:#eb7616;font-style:normal;margin-right:5px;">【下单立享折上9折】</font>
+									男士长袖印花纯棉衬衫
+									<i></i>
+								</h1>
+							</span>
+							<span class="cp">
+								<font>品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;牌 ：</font>
+								<a href="">Gucci</a>
+								<a href="" style="text-decoration:none;padding-left:6px;display:inline-block;">(古驰)</a>
+								<a href="" id="toComment" style="color:#005ba1;margin-left:10px;">已有5887条品牌评论</a>
+								<i>商品编号：10406154</i>
+							</span>
+						</div>
+						<div id="prd_price_div" class="xxjx">
+							<div class="col1 z1">
+								<span class="spw">
+									走&nbsp;秀&nbsp;价 : 
+								</span>
+								<span class="style3">3020</span>
+							</div>
+							<p class="col1 xs">
+								<span class="rightxs">
+									市场参考价 ：
+									<b>￥</b>
+									4530
+								</span>
+							</p>
+							<p class="col1 myf layer13">
+								<span class="spw">发&nbsp;货&nbsp;地</span>
+								<b>香港</b>
+								<b class="stime">预计4-7天送达</b>
+								<a href="">
+									查看配送流程
+									<i class="tiptools">
+										<img src="../img/PC-Hongkong4-7.jpg"/>
+									</i>
+								</a>
+							</p>
+							<p class="col1">
+								<span class="spw">税&nbsp;&nbsp;费 :</span>
+								由海外买家承担
+								<a href="" class="seedet">
+									详细说明
+									<em>本商品为海外商品，关税由海外卖家承担，如顾客接海关或物流商通知缴纳税费，请先行按国家规定支付，再凭纳税凭证联系走秀客服找海外卖家报销。</em>
+								</a>
+							</p>
+							<p class="col1 grays">
+								<span class="spw">温馨提示 :</span>
+								<span style="    line-height: 28px;display: inline-block;float: left;">
+									本商品无质量问题不支持退换货和拒收
+								</span>
+							</p>
+						</div>
+						<div id="prd_attr_div" class="cm">
+							<div class="modelDiv">
+								<div id="colorsArea" class="cm_hz">
+									<div class="xsxm">颜&nbsp;&nbsp;&nbsp;色 : </div>
+									<div class="cmxs noLimit">
+										<ul>
+											<li class="selected">
+												<a href="">黄色</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div id="sizeArea" class="cm_hz">
+									<div class="xsxm">尺&nbsp;&nbsp;&nbsp;码:</div>
+									<div class="cmxs noLimit">
+										<ul>
+											<li class="selected">
+												<a href="">领围尺码：38</a>
+											</li>
+											<li>
+												<a href="">领围尺码：39</a>
+											</li>
+											<li>
+												<a href="">领围尺码：40</a>
+											</li>
+											<li>
+												<a href="">领围尺码：41</a>
+											</li>
+											<li>
+												<a href="">领围尺码：42</a>
+											</li>
+											<li>
+												<a href="">领围尺码：43</a>
+											</li>
+										</ul>
+										<a href="" style="color: rgb(0, 91, 161);z-index: 9;float: left;text-decoration: underline;padding-left: 10px;">尺码指南</a>
+									</div>
+								</div>
+								<div class="cm_hz" id="j_amount">
+									<div class="xsxm">数&nbsp;&nbsp;&nbsp;量:</div>
+									<div class="cmxs">
+										<span id="minusAmount" class="down dis"></span>
+										<input type="text" value="1">
+										<span id="plusAmount" class="up"></span>件
+									</div>
+								</div>
+								<div id="installmentAndGift" class="cmxs cmxsb">
+									<a href="" class="fqfh">
+										支持分期付款
+										<em>
+											<img src="../img/fqbiao.jpg" alt=""/>
+											<b>
+												订金总金额大于
+												<font color="#ea7514">500</font>
+												元即可选择订单分期付款
+											</b>
+											<br/>
+											支付时选择"信用卡分期"-"银联在线支付",<br/>即可分期付款
+
+										</em>
+									</a>
+									<span class="wlb">
+										<a href="" class="" style="max-width:260px">
+											由有Asla&nbsp;fashion发货
+										</a>
+									</span>
+									<span class="fwb">
+										由走秀网提供售后服务
+									</span>
+								</div>
+								<div class="buy_it rela">
+									<a href="" id="user_buy_btn_1" class="user_buy0"></a>
+									<a href="" id="user_buy_btn" class="user_buy1"></a>
+									<a href="" id="addToFavoBtn" class="sc_t"></a>
+								</div>
+								<div class="call_buy">
+									电话订购
+									<strong>400-800-4499</strong>
+									<span>(8:00-24:00)</span>
+								</div>
+							</div>
+						</div>	
+					</div>
+					<div class="share_box" style="float:left;">
+						<dl>
+							<dt>
+								<img src="../img/41332483.jpg" alt="">
+							</dt>
+							<dd>
+								<p style="height:30px"></p>
+								扫扫二维码
+								<br/>
+								分享给朋友
+							</dd>
+						</dl>
+						<div class="ensuer">
+							<div id="sharebox" class="fxd" style="width:300px">
+								<span>分享到：</span>
+								<a href="javascript:;" onclick="share(3)" title="分享到新浪"></a>
+								<a href="javascript:;" onclick="share(1)" id="share1" title="分享到腾讯微博"></a>
+								<a href="javascript:;" onclick="share(2)" title="分享到人人网"></a>
+								<a href="javascript:;" onclick="share(4)" title="分享到开心网"></a>
+								<a href="javascript:;" onclick="share(8)" title="分享到豆瓣"></a>
+								<a href="javascript:;" onclick="share(7)" title="分享到美丽说"></a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			<div class="cpmx" style="position:static;top:918px;">
+				<div class="cpmx_tt">
+					<ul id="container_ul">
+						<li class="on">
+							<a href="">商品信息</a>
+						</li>
+						<li class="pdo_pl">
+							<a href="">
+								品牌评论(5890)
+								<i></i>
+							</a>
+						</li>
+						<li class="">
+							<a href="">走秀承诺</a>
+						</li>
+						<li class="">
+							<a href="">服务保障</a>
+						</li>
+					</ul>
+					<div class="cp_bags">
+						<span>3020</span>
+						<a href="" id="float_buy_add">
+							
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="main_container">
+				<div class="con_left">
+					<img src="../img/bg.jpg" alt="">
+				</div>
+				<div class="con_right">
+					<div id="bfd_box" class="right_1" style="display:table">
+						<div class="right_2_t">你可能对以下商品感兴趣</div>
+						<div class="right_2_con">
+							<div class="right_2_pro">
+								<a href="" class="list_img_a">
+									<img src="../img/g1_81_108_003.jpg" alt=""/>
+								</a>
+								<p class="sp">Lee</p>
+								<p class="tit">
+									<a href="">【下单8折】Lee 男士格子长袖衬衫</a>
+								</p>
+								<p class="jc">125</p>
+							</div>
+							<div class="right_2_pro">
+								<a href="" class="list_img_a">
+									<img src="../img/g1_81_108_003.jpg" alt=""/>
+								</a>
+								<p class="sp">Lee</p>
+								<p class="tit">
+									<a href="">【下单8折】Lee 男士格子长袖衬衫</a>
+								</p>
+								<p class="jc">125</p>
+							</div>
+							<div class="right_2_pro">
+								<a href="" class="list_img_a">
+									<img src="../img/g1_81_108_003.jpg" alt=""/>
+								</a>
+								<p class="sp">Lee</p>
+								<p class="tit">
+									<a href="">【下单8折】Lee 男士格子长袖衬衫</a>
+								</p>
+								<p class="jc">125</p>
+							</div>
+							<div class="right_2_pro">
+								<a href="" class="list_img_a">
+									<img src="../img/g1_81_108_003.jpg" alt=""/>
+								</a>
+								<p class="sp">Lee</p>
+								<p class="tit">
+									<a href="">【下单8折】Lee 男士格子长袖衬衫</a>
+								</p>
+								<p class="jc">125</p>
+							</div>
+							<div class="right_2_pro">
+								<a href="" class="list_img_a">
+									<img src="../img/g1_81_108_003.jpg" alt=""/>
+								</a>
+								<p class="sp">Lee</p>
+								<p class="tit">
+									<a href="">【下单8折】Lee 男士格子长袖衬衫</a>
+								</p>
+								<p class="jc">125</p>
+							</div>
+							<div class="right_2_pro">
+								<a href="" class="list_img_a">
+									<img src="../img/g1_81_108_003.jpg" alt=""/>
+								</a>
+								<p class="sp">Lee</p>
+								<p class="tit">
+									<a href="">【下单8折】Lee 男士格子长袖衬衫</a>
+								</p>
+								<p class="jc">125</p>
+							</div>
+							<div class="right_2_pro">
+								<a href="" class="list_img_a">
+									<img src="../img/g1_81_108_003.jpg" alt=""/>
+								</a>
+								<p class="sp">Lee</p>
+								<p class="tit">
+									<a href="">【下单8折】Lee 男士格子长袖衬衫</a>
+								</p>
+								<p class="jc">125</p>
+							</div>
+							<div class="right_2_pro">
+								<a href="" class="list_img_a">
+									<img src="../img/g1_81_108_003.jpg" alt=""/>
+								</a>
+								<p class="sp">Lee</p>
+								<p class="tit">
+									<a href="">【下单8折】Lee 男士格子长袖衬衫</a>
+								</p>
+								<p class="jc">125</p>
+							</div>
+							<div class="right_2_pro">
+								<a href="" class="list_img_a">
+									<img src="../img/g1_81_108_003.jpg" alt=""/>
+								</a>
+								<p class="sp">Lee</p>
+								<p class="tit">
+									<a href="">【下单8折】Lee 男士格子长袖衬衫</a>
+								</p>
+								<p class="jc">125</p>
+							</div>
+							<div class="right_2_pro">
+								<a href="" class="list_img_a">
+									<img src="../img/g1_81_108_003.jpg" alt=""/>
+								</a>
+								<p class="sp">Lee</p>
+								<p class="tit">
+									<a href="">【下单8折】Lee 男士格子长袖衬衫</a>
+								</p>
+								<p class="jc">125</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="backtop" style="top:0;">
+		<span class="closed">关闭</span>
+		<div class="r_menu">
+			<a href="" class="service"></a>
+			<a href="" id="right_new_bag" class="buy">
+				<span id="num" class="redx shopNum num">0</span>
+			</a>
+			<a href="" class="mail"></a>
+			<a href="javascript:;" class="backtop"></a>
 		</div>
 	</div>
 	<!--头部结束-->

@@ -8,6 +8,9 @@ body, dl, dt, dd, ol, ul, h1, h2, h3, h4, h5, form, fieldset, input, textarea, b
 body, input, option, buttom, select, textarea, table {
     font: 12px/1.5 tahoma, arial, 宋体, sans-serif;
 }
+.free-ship, .inventory_shortage, .promotion, .xiuPop .payWinCon dl dt a, .bfd_contentbox .bfd_img_logo, .bfd_box h1, .bfd_box .bfd_next_btn, .bfd_box .bfd_pre_btn, .indent_Not .form_suc .sc, .war_cannt_but, .shop_list .st_ul .sli_on, .shop_list .st_ul .sli_of, .shop_list .st_ul .sli_un, .shop_list .st_ul .sli_l, .pro .cr, .wares_div .wartab_div .war_tab th, .wares_div .wartab_div .war_c, .wares_div .wartab_div .war_s, .war_but, .war_bdel, .item_ul .itemdiv .item_a a, .setted_d span.continue_sel b, .setted_d span.sel_spa b, .setted_d .set_str, .set_far b, .add_address .addh2_bg, .isBut_Div .isbut_t, .isBut_Div .isbut_b, .isBut_Div .isbut_w, .isBut_Div .isbut_wb, .add_address .favorable_d .on, .add_address .favorable_d .out, .add_address .subinit strong, .add_address .subinit .sum .sum_sure, .add_address .d_dl .on, .add_address .d_dl .out, .indent_Not .form_suc .st, .shop_list .st_ul .sli_b, .add_address h2.addh2_bg .return, .add_address h2.addh2_bg .add, .add_address h2.addh2_bg .return a, .add_address h2.addh2_bg .add a, .add_address h2.addh2_bg .address_bg, .add_address h2.addh2_bg .address_bg a, .add_address .war_bdel a, .add_address h2.addh2_bg .all_elments a, .shop_list h4.indent_line .s_bg, .setted_d span.aging a b {
+    background: url(../img/s_shop1.gif) 0 0 no-repeat;
+}
 a {
     color: #5b5b5b;
     text-decoration: none;
@@ -26,6 +29,11 @@ ul, ol {
 table {
     border-collapse: collapse;
 }
+.wares_div .wartab_div .war_tab1 td {
+    text-align: center;
+    line-height: 25px;
+    padding: 10px;
+}
 .free-ship, .inventory_shortage, .promotion, .xiuPop .payWinCon dl dt a, .bfd_contentbox .bfd_img_logo, .bfd_box h1, .bfd_box .bfd_next_btn, .bfd_box .bfd_pre_btn, .indent_Not .form_suc .sc, .war_cannt_but, .shop_list .st_ul .sli_on, .shop_list .st_ul .sli_of, .shop_list .st_ul .sli_un, .shop_list .st_ul .sli_l, .pro .cr, .wares_div .wartab_div .war_tab th, .wares_div .wartab_div .war_c, .wares_div .wartab_div .war_s, .war_but, .war_bdel, .item_ul .itemdiv .item_a a, .setted_d span.continue_sel b, .setted_d span.sel_spa b, .setted_d .set_str, .set_far b, .add_address .addh2_bg, .isBut_Div .isbut_t, .isBut_Div .isbut_b, .isBut_Div .isbut_w, .isBut_Div .isbut_wb, .add_address .favorable_d .on, .add_address .favorable_d .out, .add_address .subinit strong, .add_address .subinit .sum .sum_sure, .add_address .d_dl .on, .add_address .d_dl .out, .indent_Not .form_suc .st, .shop_list .st_ul .sli_b, .add_address h2.addh2_bg .return, .add_address h2.addh2_bg .add, .add_address h2.addh2_bg .return a, .add_address h2.addh2_bg .add a, .add_address h2.addh2_bg .address_bg, .add_address h2.addh2_bg .address_bg a, .add_address .war_bdel a, .add_address h2.addh2_bg .all_elments a, .shop_list h4.indent_line .s_bg, .setted_d span.aging a b {
     background: url(../img/s_shop1.gif) 0 0 no-repeat;
 }
@@ -36,6 +44,15 @@ table {
     overflow: hidden;
     position: relative;
     margin-top: -4px;
+}
+.bfd img, .bfd p, .bfd ul, .bfd li, .bfd h2, .bfd {
+    margin: 0px;
+    padding: 0px;
+    border: 0;
+    list-style: none;
+    font-size: 12px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    text-align: left;
 }
 .my_shoppingCart, .wares_div, .setted_d, .add_address, .indent_Not {
     width: 950px;
@@ -141,4 +158,271 @@ div.wares_div {
 }
 .wares_div .wartab_div .war_tab1 input {
     vertical-align: middle;
+}
+.xp_price {
+    width: 130px;
+}
+.quantity_div {
+    width: 130px;
+}
+.op_div {
+    width: 130px;
+}
+.goodsitemb {
+    border-bottom: 1px solid #D6D3D3;
+}
+.item_checked {
+    background: #fff4e8;
+}
+.wares_div .wartab_div .war_tab1 td.chebox {
+    text-align: left;
+    padding-left: 15px;
+}
+.wares_div .wartab_div .war_tab1 input {
+    vertical-align: middle;
+}
+.tx_img{
+    height:100px;
+    width:60px;
+}
+.wares_div .wartab_div .war_tab1 .txtl {
+    text-align: left;
+}
+txt1_tab{
+    text-align: left;
+    padding: 0px;
+    margin: 0px;
+}
+.chebox {
+    width:42px;
+    height:91px;
+    text-align: left;
+    padding: 10px;
+}
+.tx_img{
+    padding:10px;
+    width:62px;
+    height:91px;
+}
+.txt1{
+    line-height: 25px;
+    padding: 10px;
+    text-align: left;
+    width:307px;
+    height:91px;
+}
+.wer_span {
+    position: relative;
+    width: 200px;
+    display: block;
+    padding-right: 0px;
+    line-height: 18px;
+}
+.no_youhui{
+    display:block;
+    text-align: left;
+    margin: 0px;
+    padding: 0px;
+    width: 80px;
+    vertical-align: top;
+}
+.pricetd{
+    width:66px;
+    height:91px;
+    padding:10px;
+    line-height:91px;
+}
+.wares_div .wartab_div .war_tab1 .at{
+    border: 1px solid #666;
+    height: 10px;
+    width: 10px;
+    overflow: hidden;
+    display: inline-block;
+    line-height: 8px;
+    margin-bottom: -3px;
+}
+.war_txt{
+    line-height: 15px;
+    height: 15px;
+}
+.wares_div .wartab_div .war_txt {
+    width: 30px;
+    border: 1px solid #dfdfdf;
+    margin: 0 10px;
+    text-align: center;
+}
+.d1 span{
+    display:block;
+    text-align: center;
+    line-height: 15px;
+    width:60px;
+    height:15px;
+}
+.cartbar {
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid #d8d7d7;
+    background: #fff;
+    margin: 5px auto 0;
+}
+.carbar_cheall {
+    float: left;
+    height: 18px;
+    line-height: 18px;
+    padding: 16px 0 16px 9px;
+    white-space: nowrap;
+}
+.cartbar_opa {
+    float: left;
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+}
+.cartbar_opa a.delbtn {
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 15px;
+    margin-left: 15px;
+}
+.cartbar_chego {
+    float: left;
+    width: 200px;
+    text-align: center;
+    margin-left: 30px;
+}
+.cartbar_chego b {
+    margin: 0 5px;
+    color: #ea7515;
+}
+.cartbar_totall {
+    float: left;
+    width: 240px;
+    height:53px;
+}
+.cartbar_totall span {
+    color: #a1a1a1;
+}
+.cartbar_totall .cartbar_total_spn span {
+    color: #ea7515;
+    font-size: 20px;
+    font-weight: normal;
+}
+.cartbar_pay {
+    float: right;
+    display: block;
+    width: 114px;
+    height: 50px;
+    line-height: 50px;
+    background: url(../img/cartbar_btn.jpg) no-repeat;
+    text-indent: -9999em;
+    overflow: hidden;
+    border: 0px;
+}
+.cartbar_payok {
+    background-position: 0 -50px;
+}
+.elements_list {
+    width: 950px;
+    clear: both;
+    overflow: hidden;
+    margin-top: 12px;
+}
+.bfd {
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    border: solid 1px #ccc;
+    clear: both;
+}
+#banner_ShoppingCart {
+    padding-bottom: 12px;
+}
+h2.bfd_title {
+    background: url( ../img/bfd_cart_title.gif) repeat-x left bottom;
+    height: 29px;
+    line-height: 29px;
+    font-size: 14px;
+    clear: both;
+    padding-left: 0px;
+    text-align: left;
+    color: #333;
+}
+.bfd_mainWidth ul {
+    display: block;
+    margin: 15px 0 10px 0;
+    overflow: hidden;
+    width: 100%;
+    padding-left: 4px;
+}
+.bfd_mainWidth ul li {
+    float: left;
+    width: 168px;
+    padding: 0 10px;
+}
+.bfd_img {
+    padding: 0;
+}
+.bfd_img img {
+    width: 180px;
+    height: 240px;
+    overflow: hidden;
+    display: block;
+}
+.name_wp {
+    height: 17px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.bfd_name {
+    color: #696969;
+    line-height: 14px;
+    overflow: hidden;
+}
+.bfd_price {
+    font-size: 12px;
+    padding-top: 5px;
+}
+.bfd_price span {
+    color: #F63;
+    font-weight: bold;
+}
+.set_far {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+.set_far h2 {
+    font-size: 12px;
+    height: 27px;
+}
+.set_far h2 a {
+    display:block;
+    width: 171px;
+    height: 27px;
+    overflow: hidden;
+    position: relative;
+}
+.set_far h2 b, .set_far h2 a.on b {
+    width: 171px;
+    height: 27px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position: 0 -259px;
+}
+.set_far h2 a.out b {
+    background-position: 0 -289px;
+}
+.M_shopping {
+    color: #7D7D7D;
+    line-height: 22px;
+    margin: 15px auto 20px;
+    overflow: hidden;
+    text-align: center;
+    width: 950px;
+    border-top: 1px solid #999;
+    padding-top: 10px;
 }
